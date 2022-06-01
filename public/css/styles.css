@@ -88,7 +88,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+.compte:hover{
+  background-color: #e095258b;
+}
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -263,6 +265,28 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   animation-iteration-count: infinite;
 }
 .butsigup{
+  border-radius:10px;
+  border: none;
+  /* padding: 20px; */
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+@keyframes example {
+  0%  {background-color: rgb(67, 241, 241);}
+    15%  {background-color: rgb(42, 243, 52);}
+    30%  {background-color: rgb(33, 122, 128);}
+    45% {background-color: rgba(180, 230, 129, 0.571);}
+    60%  {background-color: rgb(104, 104, 166);}
+    100% {background-color: rgba(242, 202, 42, 0.993);}
+}
+.SAPRO {
+  
+  background-color: rgba(0, 123, 255, 0.494);
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.SAPRO{
   border-radius:10px;
   border: none;
   /* padding: 20px; */
@@ -3466,13 +3490,15 @@ textarea.form-control-lg {
 }
 
 .btn-outline-dark {
-  color: #212529;
-  border-color: #212529;
+  color:#ce1111 ;
+  border-color: #ce1111;
+  font-weight: bold;
 }
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  border-color: #09c858;
+  background-color: #09c858;
+
 }
 .btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
   box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
@@ -4474,6 +4500,7 @@ textarea.form-control-lg {
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
+
 }
 .navbar-light .navbar-nav .nav-link.disabled {
   color: rgba(0, 0, 0, 0.3);

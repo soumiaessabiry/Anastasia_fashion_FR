@@ -61,7 +61,7 @@
             <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
             <div class="price">$ 70.0</div>
         </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3 " style="">
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3 " >
             <div class="product"> <img src="../public/image/prod1.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>

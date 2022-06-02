@@ -1,0 +1,27 @@
+/* #spacing-row{
+    height: 7px;
+} */
+.bg-blue:hover{
+    background-color: #ffd83e22;
+    color: #eee;
+    border-radius: 18px;
+
+}
+ .bg-blue a:hover{
+    background-color: #f8f8f8;
+    color: #eee;
+    cursor:pointer;
+    border-radius:7px ;
+
+}
+.table thead th,.table td{
+    border: none;
+    padding: 15px;
+}
+li a:hover{
+    background-color: #ffd83e31;
+    border-radius: 12px;
+}
+.btn:hover{
+color: #eee;
+}

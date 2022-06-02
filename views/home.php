@@ -204,22 +204,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-center text-white">
-                        <a href="#"></a><button class=" btn glow-on-hover example SAPRO fw-bold p-3 px-4 " style="color: #FFF;  " ><img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS </button></a>
-                    </div>
+                </div>   
                    
-                </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center  fw-bold " style="color:rgb(146, 144, 144) ;">Copyright &copy;Anastasiafashion 2022</p></div>
-            <div class="container"><p class="mt-2 text-center text-white fw-bolder"><img src="https://img.icons8.com/color/25/000000/gmail-new.png " alt=""> Anastasiafashion@gmail.com <span> <img src="https://img.icons8.com/color/25/000000/whatsapp--v1.png " alt="whatssap"> 0697156997</span></p></div>
-            <div class="container"><p class="mt-2 text-center text-white"><a href="#"><img src="https://img.icons8.com/color/25/000000/instagram-new--v1.png " alt="instagrame"></a><a href="#"><img src="https://img.icons8.com/doodle/25/000000/facebook-new.png" alt="facebook"></a></p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <!-- <script src="js/scripts.js"></script> --> -->
+        <div class="text-center text-white">
+            <a href="../views/allproduct.php"></a><button class=" btn glow-on-hover example SAPRO fw-bold p-3 px-4 mb-4 " style="color: #FFF; " ><img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS </button></a>
+        </div>
+    <?php 
+    require_once("../views/includes/footer.php");
+    ?>
     </body>
 </html>

@@ -62,7 +62,7 @@
                                         <td class="text-nowrap">admin@gmail.com</td>
                                         <td class="text-nowrap">2001</td>
                                         <td class="d-flex  align-items-start">
-                                            <a href="#"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
+                                            <a href="../views/Updatadmin.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
                                             <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
                                         </td>
                                     </tr>
@@ -93,6 +93,35 @@
 </div>
 <!-- model add Admin -->
        <!-- Modal -->
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Admin</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+			<form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate>
+               <div class="mb-3 fw-bold">
+                                    <label for="exampleFormControlInput1" class="form-label">Nom complet</label>
+                                    <input type="text" class="form-control" id="nomadmin" name="nomadmin" placeholder="Enter name complet" style="margin-bottom: 32px;" data-parsley-length="[4, 20]" data-parsley-trigger="change" required>
+                </div>
+                
+                <div class="mb-3  fw-bold">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" data-parsley-type="email" class="form-control" id="emailadmin" name="emailadmin" placeholder="Enter Email" required data-parsley-trigger="change">
+                 </div>
+				 <div class="mb-3  fw-bold">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordadmin" name="passwordadmin" placeholder="Enter passwordadmin" required data-parsley-trigger="change">
+                 </div>
+				 <input type="button"  class="btn btn-outline-warning btn-lg  "name="Addadmin" value="ADD Admin">
+				 <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
 
+			</form>
+            </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

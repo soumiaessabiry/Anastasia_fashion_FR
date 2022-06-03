@@ -39,7 +39,6 @@
 <div class="wrapper ">
 		<p class="text-center fw-bold fs-3 pt-2" style="color:#ecb848f8 ;">Updat Admin<img src="https://img.icons8.com/ios/50/undefined/admin-settings-male.png"/></p>
 		<form class="p-3 mt-3">
-			
 			<div class="form-field d-flex align-items-center">
             <img src="https://img.icons8.com/color/40/undefined/circled-user-male-skin-type-7--v1.png"/>		
 			<input type="text" name="usernameadmin" id="usernameadmin" placeholder="Username">
@@ -55,7 +54,6 @@
                 <img src="https://img.icons8.com/ios-filled/40/undefined/lock-2.png"/>
 				<input type="password" name="passwordadmin" id="passwordadmin" placeholder="Password">
 			</div>
-		
 		   <input type="submit" name="updatadmin" class="btn mt-3" value="Updatadmin">
 		</form>
 	

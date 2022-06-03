@@ -10,14 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <link href="../public/css/styles.css" rel="stylesheet" />
     <link href="../public/css/admin.css" rel="stylesheet" />
-    <title>Clienttable</title>
+    <title>Product anastasia </title>
 </head>
 <body>
 <div class="">
 <div class="mb-4" >
 <nav class="  navbar navbar-expand-lg navbar-light " style="background:rgb(203, 150, 16);">
         <div class="container px-lg-5">
-            <span class="navbar-brand" ><img src="../public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></span>
+            <a class="navbar-brand" href="#!"><img src="../public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -33,47 +33,52 @@
 </nav>
 </div>
  <!-- table -->
+    <div class="" >
             <div class=" mx-2 mt-3 table-wrapper">
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                        <!-- <button type="button" class="btn btn-outline-warning btn-lg fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button> -->
-                        <a href="#"   class="btn btn-outline-secondary btn-lg fw-bold mb-3" >Client Anastasia <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a>
+                        <a href="#"   class="btn btn-outline-secondary btn-lg fw-bold mb-3" >Product Anastasia <img src="https://img.icons8.com/doodle/48/undefined/used-product.png" style="width: 40px;height: 40px;"></a>
+
+                        <!-- <button type="button" class="btn btn-outline-warning btn-lg fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button> -->
+                        <!-- <a href="#addetud"   data-bs-toggle="modal" data-bs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
                         </div>
                        
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-striped table align-middle" id="myTableclient">
+                    <table class="table table-striped table align-middle" id="myTable">
                         <thead>
-                            <tr style="  background-color:rgba(40, 67, 205, 0.492)">
-                                <th >Profil</th>
-                                <th hidden>id</th>
-                                <th>Prenon</th>
-                                <th>Nom</th>
-                                <th>Email</th>
-                                <th>Password</th>
+                            <tr style=" background-color: #12e5c5df;">
+                                <th >id</th>
+                                <th>produit</th>
+                                <th>discription</th>
+                                <th>prix</th>
+                                <th>Quantiter</th>
+                                <th>produit ajouté par : </th>
                             </tr>
                         </thead>
                         <tbody class="fw-bold">
-                                    <tr class="bg-client">
-                                        <td ><img src="https://img.icons8.com/ios-filled/40/undefined/user-female-circle.png"/></td>
-                                        <td hidden >1</td>
-                                        <td class="text-nowrap">prenon client</td>
-                                        <td class="text-nowrap">Nomclient </td>
-                                        <td class="text-nowrap">client@gmail.com</td>
-                                        <td class="text-nowrap">2001</td>
-                                       
+                                    <tr class="bg-product">
+                                        <td >1</td>
+                                        <td class="text-nowrap">produit A </td>
+                                        <td class="text-nowrap">discription</td>
+                                        <td class="text-nowrap">300dh</td>
+                                        <td class="text-nowrap">30</td>
+                                        <td class="text-nowrap">creaTeur X</td>
+                                        
                                     </tr>
                                     <tr id="spacing-row">
                                     <td></td>
                                     </tr>
-                                    
                         </tbody>
                     </table>
                 </div>
+            </div>
     
+    </div>
 
+</div>
 
 
 </body>

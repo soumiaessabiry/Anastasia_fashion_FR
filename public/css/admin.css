@@ -1,6 +1,19 @@
 /* /* #spacing-row{
     height: 7px;
 } */
+.bg-client:hover{
+    background-color: #3e6bff22;
+    color: rgb(238, 238, 238);
+    border-radius: 18px;
+    /* color: rgba(40, 67, 205, 0.492); */
+}
+.bg-product:hover{
+    background-color: #12e5c534;
+    color: rgb(238, 238, 238);
+    border-radius: 18px;
+    /* color: rgba(40, 67, 205, 0.492); */
+}
+ 
 .bg-blue:hover{
     background-color: #ffd83e22;
     color: #eee;

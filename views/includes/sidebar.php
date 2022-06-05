@@ -16,7 +16,7 @@
                   
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Panier <img src="https://img.icons8.com/ios-filled/30/undefined/shopping-cart-promotion.png"/> </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Panier <img src="https://img.icons8.com/ios-filled/50/undefined/shopping-cart-promotion.png"/> </a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">compte</a>
@@ -26,9 +26,6 @@
                   
                             </ul>
                         </li>
-                 
-
-
                     </ul>
                     
                 </div>

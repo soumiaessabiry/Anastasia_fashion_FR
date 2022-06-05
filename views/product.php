@@ -66,7 +66,6 @@
                                         <td class="text-nowrap">300dh</td>
                                         <td class="text-nowrap">30</td>
                                         <td class="text-nowrap">creaTeur X</td>
-                                        
                                     </tr>
                                     <tr id="spacing-row">
                                     <td></td>

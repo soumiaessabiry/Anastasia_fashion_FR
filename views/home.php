@@ -205,12 +205,13 @@
                         </div>
                     </div>
                 </div>   
-                   
-            </div>
         </section>
         <div class="text-center text-white">
-            <a href="../views/allproduct.php"></a><button class=" btn glow-on-hover example SAPRO fw-bold p-3 px-4 mb-4 " style="color: #FFF; " ><img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS </button></a>
+        <!-- <button class=" btn glow-on-hover example  fw-bold p-3 px-4  " style="color: #FFF; " ><a href=""></a> </button></a> -->
+        <a href="../views/allproduct.php"> <button class=" btn glow-on-hover SAPRO example butsigup fw-bold p-3 px-4 mb-4 " style="color: #FFF;  " > <img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS</button></a>
+
         </div>
+    
     <?php 
     require_once("../views/includes/footer.php");
     ?>

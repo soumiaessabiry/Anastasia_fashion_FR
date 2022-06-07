@@ -5,23 +5,22 @@
     background-color: #3e6bff22;
     color: rgb(238, 238, 238);
     border-radius: 18px;
-    /* color: rgba(40, 67, 205, 0.492); */
 }
 .bg-product:hover{
-    background-color: #12e5c534;
+    background-color: #ab64a26a;
     color: rgb(238, 238, 238);
     border-radius: 18px;
-    /* color: rgba(40, 67, 205, 0.492); */
 }
  
 .bg-blue:hover{
-    background-color: #ffd83e22;
+    background-color: #53104a36;
     color: #eee;
     border-radius: 18px;
+    /* pointer-events:visiblePainted; */
 
 }
  .bg-blue a:hover{
-    background-color: #f8f8f8;
+    background-color: #8b1062b7;
     color: #eee;
     cursor:pointer;
     border-radius:7px ;
@@ -36,5 +35,8 @@ li a:hover{
     border-radius: 12px;
 }
 .btn:hover{
-color: #eee;
+color: #a80892;
+background-color:#ab64a2;
+font-weight: bold !important;
 }
+

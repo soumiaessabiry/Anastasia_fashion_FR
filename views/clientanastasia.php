@@ -37,7 +37,7 @@
 <body>
 
 <div class="wrapper">
-<?php require_once("../views/includes/sidebardesigner.php"); ?>
+<?php require_once("../views/includes/sidbaradm.php"); ?>
 
     <div class="">
         <div class="" >
@@ -60,7 +60,7 @@
                                 <th>Prenon</th>
                                 <th>Nom</th>
                                 <th>Email</th>
-                                <th></th>
+                                <th>password</th>
                             </tr>
                         </thead>
                         <tbody class="fw-bold">

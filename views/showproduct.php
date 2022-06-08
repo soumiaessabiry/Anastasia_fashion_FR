@@ -29,20 +29,20 @@
                         <figcaption>
                             <h3>Dreess Anastasia</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <button class="btn btn-danger btn-lg ">230dh</button>
+                            <button class="btn btn-lg p-3 fs-3" style="background: #410839; color:azure" >230dh</button>
                         </figcaption>
                         <a href="#"></a>
                     </figure>
                     <figure class="col-lg-5 col-sm-12   ">
                         <figcaption>
                             <div class="card text-center" style=" margin: 16px auto;" >
-                                <div class="card-header fw-bold " style="background: #d4c864d2;"> Commande</div>
+                                <div class="card-header fw-bold " style="background: #ab64a26a;"> Commande</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Quantiter</h5>
                                     <p class="card-text">
                                     <input type="number" name="qutiterproduit" id="qutiterproduit" value="1" >
                                     </p>
-                                    <a href="#" class="btn btn-success">Ajouter au panier</a>
+                                    <a href="#" class="btn p-3 fs-3" style="background: #410839; color:azure">  Ajouter au panier</a>
                                 </div>
                                 
                             </div>

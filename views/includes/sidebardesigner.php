@@ -27,7 +27,7 @@
           <li>
           <img  class="fas " src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-7--v1.png"/>
             <div class="profile_dd">
-               <div class="dd_item"><a href="../views/profilAdmin.php">Profile</a></div>
+               <div class="dd_item"><a href="../views/profilfashiondes.php">Profile</a></div>
                <div class="dd_item">Logout</div>
             </div>
           </li>

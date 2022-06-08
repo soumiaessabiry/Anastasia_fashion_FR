@@ -24,7 +24,7 @@
        ?>
 <div class="container bg-white ">
 
-    <div class="row ">
+    <div class="row " style="background: #ab64a26a;">
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
             <div class="product"> <img src="../public/image/prod3.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
@@ -32,9 +32,8 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="tag bg-red">sale</div>
-            <div class="title pt-4 pb-1">Winter Sweater</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            
+            <div class="title fw-bold pt-4 pb-1">Winter Sweater</div>
             <div class="price">$ 60.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -44,9 +43,8 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="tag bg-black">out of stock</div>
-            <div class="title pt-4 pb-1">Denim Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+           
+            <div class="title fw-bold pt-4 pb-1">Denim Dresses</div>
             <div class="price">$ 55.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -56,9 +54,8 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="tag bg-green">new</div>
-            <div class="title pt-4 pb-1"> Empire Waist Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          
+            <div class="title fw-bold pt-4 pb-1"> Empire Waist Dresses</div>
             <div class="price">$ 70.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3 " >
@@ -68,12 +65,11 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="title pt-4 pb-1">Pinafore Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="title fw-bold pt-4 pb-1">Pinafore Dresses</div>
             <div class="price">$ 60.0</div>
         </div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4"  style="background: #ab64a26a;">
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
             <div class="product"> <img src="../public/image/prod4.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
@@ -81,9 +77,8 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="tag bg-red">sale</div>
-            <div class="title pt-4 pb-1">Winter Sweater</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+           
+            <div class="title fw-bold pt-4 pb-1">Winter Sweater</div>
             <div class="price">$ 60.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -93,9 +88,8 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="tag bg-black">out of stock</div>
-            <div class="title pt-4 pb-1">Denim Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            
+            <div class="title fw-bold pt-4 pb-1">Denim Dresses</div>
             <div class="price">$ 55.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -105,8 +99,7 @@
                     <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
-            <div class="title pt-4 pb-1"> Empire Waist Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="title fw-bold pt-4 pb-1"> Empire Waist Dresses</div>
             <div class="price">$ 70.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
@@ -117,8 +110,7 @@
                 </ul>
             </div>
             <div class="tag bg-green">new</div>
-            <div class="title pt-4 pb-1">Pinafore Dresses</div>
-            <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+            <div class="title fw-bold pt-4 pb-1">Pinafore Dresses</div>
             <div class="price">$ 60.0</div>
         </div>
     </div>

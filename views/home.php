@@ -5,16 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
-        <!-- Bootstrap icons-->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" /> -->
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <title>homeanastasia</title>
         <link href="../public/css/styles.css" rel="stylesheet" />
+        <style>
+            .btnadd{
+                background:  #410839 !important;
+                color: #FFF !important;
+                font-weight: bold !important;
+            }
+            .btnadd:hover{
+                background:  #ab64a26a !important;
+                color: #410839 !important;
+                font-weight: bold !important;
+            }
+        </style>
+
     </head>
     <body>
-        <!-- Navigation-->
         <?php 
        require_once('../views/includes/sidebar.php');
        ?>
@@ -22,15 +29,15 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder" style="color: rgba(255, 208, 0, 0.677); font-family: monospace;">Anastasia Fashion</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">You are a fashion designer، you are welcome here to impress us and our customers <span><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-flat-bearicons.png"/></span></p>
-                    <a href="../views/signupcreateur.php"> <button class=" btn glow-on-hover example butsigup fw-bold p-3 px-4 " style="color: #FFF;  " > <img src="https://img.icons8.com/ios-glyphs/35/000000/user--v1.png" alt="">sign up here </button></a>
+                    <h1 class="display-4 fw-bolder" style="color:#dda2d5; font-family: monospace;">Anastasia Fashion</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Looking for quality and reliability?? Anastasia welcomes you <span><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-flat-bearicons.png"/></span></p>
+                    <a href="../views/signup.php"> <button class=" btn glow-on-hover example butsigup fw-bold p-4  fs-2" style="color: #FFF;  " > <img src="https://img.icons8.com/ios-glyphs/35/000000/user--v1.png" alt="">sign up here </button></a>
                 </div>
             </div>
         </header>
         <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
+        <section class="">
+            <div class="container px-4 px-lg-5 mt-5" style="background: #ab64a26a; padding: 15px; margin-top: 12px;" >
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
@@ -41,21 +48,12 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Fancy Product</h5>
-                                     <!-- Product reviews-->
-                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
+                                    <span>240dh</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -70,22 +68,14 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    <span class="text-muted text-decoration-line-through">400.00dh</span>
+                                    <span>300dh</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -101,22 +91,14 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Sale Item</h5>
                                      <!-- Product reviews-->
-                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                   
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-
-                                    $25.00
+                                    <span class="text-muted text-decoration-line-through">250.00DH</span><span>  230.00DH</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -129,21 +111,13 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00
+                                    <span class="text-muted text-decoration-line-through">250.00DH</span><span>  230.00DH</span>
+
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -158,22 +132,13 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Sale Item</h5>
-                                     <!-- Product reviews-->
-                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    <span class="text-muted text-decoration-line-through">250.00DH</span><span>  230.00DH</span>
+
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -186,21 +151,13 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Fancy Product</h5>
-                                     <!-- Product reviews-->
-                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $120.00 - $280.00
+                                    <span class="text-muted text-decoration-line-through">250.00DH</span><span>  230.00DH</span>
+
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn  btnadd btn-outline-dark mt-auto" href="#">View options</a></div>
                             </div>
                         </div>
                     </div>

@@ -78,7 +78,7 @@
                             <td class="text-nowrap">designer@gmail.com</td>
                             <td class="text-nowrap">2001</td>
                             <td class="d-flex  align-items-start">
-                                <a href="../views/Updatadmin.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
+                                <a href="../views/updatefashiondes.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
                                 <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
                             </td>
                         </tr>
@@ -95,7 +95,7 @@
                             <td class="text-nowrap">designer@gmail.com</td>
                             <td class="text-nowrap">2001</td>
                             <td class="d-flex  align-items-start">
-                                <a href="../views/Updatadmin.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
+                                <a href="../views/updatefashiondes.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
                                 <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
                             </td>
                         </tr>

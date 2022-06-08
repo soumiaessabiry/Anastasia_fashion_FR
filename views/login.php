@@ -16,7 +16,7 @@
        require_once('../views/includes/sidebar.php');
        ?>
     <div class="wrapper ">
-		<p class="text-center fw-bold fs-3 pt-2" style="color:#ecb848f8 ;">Login<img src="https://img.icons8.com/color-glass/48/undefined/user-rights.png"/></p>
+		<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Login<img src="https://img.icons8.com/color-glass/48/undefined/user-rights.png"/></p>
 		<form class="p-3 mt-2">
 		
 			<div class="form-field d-flex align-items-center">
@@ -30,7 +30,7 @@
 		<input type="submit" name="loginclient" class="btn mt-3 fs-4" value="login">
 		</form>
 		<div class="text-center fs-6">
-        <a class="  fs-5" href="../views/signupclient.php">Inscription</a>
+        <a class="  fs-5" href="../views/signup.php">Inscription</a>
 		</div>
         
    </div>

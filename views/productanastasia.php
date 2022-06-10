@@ -30,19 +30,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>productanastasia</title>
-    <link rel="stylesheet" href="../public/css/dachbord.css">
-    <link href="../public/css/admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/dachbord.css">
+    <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
 
 <div class="wrapper">
-<?php require_once("../views/includes/sidbaradm.php"); ?>
 
-    <div class="">
              
 
-        <div class="" >
+        <div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
             <div class="  mt-3 table-wrapper" style="height:100vh">
                     <div class="table-title">
                         <div class="">
@@ -55,7 +53,7 @@
                         </div>
                     </div>
                     <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTable">
+                    <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                         <thead>
                             <tr style=" background-color: #ab64a26a;">
                                 <th >id</th>

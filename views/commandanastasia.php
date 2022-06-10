@@ -30,13 +30,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>command anasatasia</title>
-    <link rel="stylesheet" href="../public/css/dachbord.css">
-    <link href="../public/css/admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/dachbord.css">
+    <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
 <div class="wrapper">
-<?php require_once("../views/includes/sidbaradm.php"); ?>
 
     <div class="">
         <div class="" >

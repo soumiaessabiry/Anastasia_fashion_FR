@@ -9,22 +9,20 @@
     <!-- Font Awesome 5 CSS -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
     <!-- Products List CSS -->
-    <link rel="stylesheet" href="../public/css/showproduit.css">
-    <link href="../public/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/showproduit.css">
+    <link href="././public/css/styles.css" rel="stylesheet" />
 
    
   </head>
     <body> 
         <main style="margin-top: 100px;">
             <!-- DEMO HTML -->
-            <?php 
-                require_once('../views/includes/sidebar.php');
-                ?>
+   
             <div class="container bg-white ">
 
                 <div class=" row d-flex justify-content-center container mt-5">
                     <figure class="col-lg-5 col-sm-12  snip1527">
-                    <div class="image"><img src="../public/image/prod6.jpg" alt="pr-sample23" />
+                    <div class="image"><img src="././public/image/prod6.jpg" alt="pr-sample23" />
                     </div>
                         <figcaption>
                             <h3>Dreess Anastasia</h3>
@@ -42,7 +40,7 @@
                                     <p class="card-text">
                                     <input type="number" name="qutiterproduit" id="qutiterproduit" value="1" >
                                     </p>
-                                    <a href="#" class="btn p-3 fs-3" style="background: #410839; color:azure">  Ajouter au panier</a>
+                                    <a href="panier" class="btn p-3 fs-3" style="background: #410839; color:azure">  Ajouter au panier</a>
                                 </div>
                                 
                             </div>

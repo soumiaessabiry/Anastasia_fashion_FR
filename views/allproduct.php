@@ -9,8 +9,8 @@
     <!-- Font Awesome 5 CSS -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
     <!-- Products List CSS -->
-    <link rel="stylesheet" href="../public/css/allproduit.css">
-    <link href="../public/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/allproduit.css">
+    <link href="././public/css/styles.css" rel="stylesheet" />
 
    
   </head>
@@ -19,17 +19,15 @@
   
  <main style="margin-top: 100px;">
 <!-- DEMO HTML -->
-     <?php 
-       require_once('../views/includes/sidebar.php');
-       ?>
+    
 <div class="container bg-white ">
 
     <div class="row " style="background: #ab64a26a;">
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod3.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod3.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    showproducti class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             
@@ -37,10 +35,10 @@
             <div class="price">$ 60.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod11.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod11.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
            
@@ -48,10 +46,10 @@
             <div class="price">$ 55.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod2.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod2.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
           
@@ -59,10 +57,10 @@
             <div class="price">$ 70.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3 " >
-            <div class="product"> <img src="../public/image/prod1.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod1.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             <div class="title fw-bold pt-4 pb-1">Pinafore Dresses</div>
@@ -71,10 +69,10 @@
     </div>
     <div class="row mt-4"  style="background: #ab64a26a;">
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod4.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod4.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
            
@@ -82,10 +80,10 @@
             <div class="price">$ 60.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod5.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod5.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             
@@ -93,20 +91,20 @@
             <div class="price">$ 55.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod6.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod6.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             <div class="title fw-bold pt-4 pb-1"> Empire Waist Dresses</div>
             <div class="price">$ 70.0</div>
         </div>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="../public/image/prod7.jpg" alt="">
+            <div class="product"> <img src="././public/image/prod7.jpg" alt="">
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="../views/showproduct.php"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
+                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             <div class="tag bg-green">new</div>
@@ -115,10 +113,7 @@
         </div>
     </div>
 </div>
-<!-- EMD DEMO HTML -->
  </main>
- <?php 
-    require_once("../views/includes/footer.php");
- ?>
 
+  </body>
 </html>

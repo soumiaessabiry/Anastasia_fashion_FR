@@ -30,14 +30,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>Fashiondesigner</title>
-    <link rel="stylesheet" href="../public/css/dachbord.css">
-    <link href="../public/css/admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/dachbord.css">
+    <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
 
 <div class="wrapper">
-<?php require_once("../views/includes/sidbaradm.php"); ?>
 
       <div class="">
              
@@ -78,30 +77,14 @@
                             <td class="text-nowrap">designer@gmail.com</td>
                             <td class="text-nowrap">2001</td>
                             <td class="d-flex  align-items-start">
-                                <a href="../views/updatefashiondes.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
+                                <a href="updatefashiondes"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
                                 <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
                             </td>
                         </tr>
                         <tr id="spacing-row">
                         <td></td>
                         </tr>
-                               
-                        <tr class="bg-blue">
-                            <td ><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/undefined/external-fashion-lifestyles-flaticons-lineal-color-flat-icons-4.png"/></td>
-                            <td >2</td>
-                            <td class="text-nowrap"> non designer</td>
-                            <td class="text-nowrap"> Prenom designer</td>
-                            <td class="text-nowrap"> CIN</td>
-                            <td class="text-nowrap">designer@gmail.com</td>
-                            <td class="text-nowrap">2001</td>
-                            <td class="d-flex  align-items-start">
-                                <a href="../views/updatefashiondes.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
-                                <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
-                            </td>
-                        </tr>
-                        <tr id="spacing-row">
-                        <td></td>
-                        </tr>
+                    
                                
                         
                     </tbody>

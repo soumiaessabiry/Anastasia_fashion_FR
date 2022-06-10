@@ -24,13 +24,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title> dachbord admin</title>
-    <link rel="stylesheet" href="../public/css/dachbord.css">
+    <link rel="stylesheet" href="././public/css/dachbord.css">
 
 </head>
 <body>
 
 <div class="wrapper">
-<?php require_once("../views/includes/sidbaradm.php"); ?>
 
       <div class="container">
         <div class="row row-cols-1 row-cols-md-4  g-4">

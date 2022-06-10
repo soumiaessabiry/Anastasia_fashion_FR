@@ -30,14 +30,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>produiddesigner</title>
-    <link rel="stylesheet" href="../public/css/dachbord.css">
-    <link href="../public/css/admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././public/css/dachbord.css">
+    <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
 
 <div class="wrapper">
-<?php require_once("../views/includes/sidebardesigner.php"); ?>
 
     <div class="">
             <div class="  mt-3 table-wrapper" style="height:85vh">
@@ -71,29 +70,14 @@
                                 <td class="text-nowrap">300dh</td>
                                 <td class="text-nowrap">30</td>
                                 <td class="d-flex  align-items-start">
-                                <a href="../views/updatepoduit.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
+                                <a href="updatepoduit"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
                                 <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
                             </td>
                             </tr>
                             <tr id="spacing-row">
                             <td></td>
                             </tr>
-                            <tr class="bg-product">
-                                <td >1</td>
-                                <td class="text-nowrap">produit A </td>
-                                <td class="text-nowrap">image </td>
-                                <td class="text-nowrap">discription</td>
-                                <td class="text-nowrap">300dh</td>
-                                <td class="text-nowrap">30</td>
-                                <td class="d-flex  align-items-start">
-                                <a href="../views/updatepoduit.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
-                                <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
-                            </td>
-                            </tr>
-                            <tr id="spacing-row">
-                            <td></td>
-                            </tr>
-                       
+                          
                             
                         </tbody>
                     </table>

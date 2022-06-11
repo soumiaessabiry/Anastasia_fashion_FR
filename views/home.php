@@ -22,16 +22,14 @@
 
     </head>
     <body>
-        <?php 
-    //    include('../views/includes/sidebar.php');
-       ?>
+       
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder" style="color:#dda2d5; font-family: monospace;">Anastasia Fashion</h1>
                     <p class="lead fw-normal text-white-50 mb-0">Looking for quality and reliability?? Anastasia welcomes you <span><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-flat-bearicons.png"/></span></p>
-                    <a href="views/signup.php"> <button class=" btn glow-on-hover example butsigup fw-bold p-4  fs-2" style="color: #FFF;  " > <img src="https://img.icons8.com/ios-glyphs/35/000000/user--v1.png" alt="">sign up here </button></a>
+                    <a href="signup"> <button class=" btn glow-on-hover example butsigup fw-bold p-4  fs-2" style="color: #FFF;  " > <img src="https://img.icons8.com/ios-glyphs/35/000000/user--v1.png" alt="">sign up here </button></a>
                 </div>
             </div>
         </header>
@@ -165,7 +163,7 @@
         </section>
         <div class="text-center text-white">
         <!-- <button class=" btn glow-on-hover example  fw-bold p-3 px-4  " style="color: #FFF; " ><a href=""></a> </button></a> -->
-        <a href="views/allproduct.php"> <button class=" btn glow-on-hover SAPRO example butsigup fw-bold p-3 px-4 mb-4 " style="color: #FFF;  " > <img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS</button></a>
+        <a href="allproduct"> <button class=" btn glow-on-hover SAPRO example butsigup fw-bold p-3 px-4 mb-4 " style="color: #FFF;  " > <img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS</button></a>
 
         </div>
     

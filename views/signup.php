@@ -1,3 +1,41 @@
+
+<?php
+$nomclient="";
+$prenomclient="";
+$pwdclient="";
+$confpwdclient="";
+$imgprofilclient="";
+$error_admin="";
+if (isset($_POST["signupclient"])) {
+
+	$imgprofilclient=$_POST['imgprofilclient'];
+	$nomclient=$_POST['nomclient'];
+    $prenomclient=$_POST['prenomclient'];
+    $pwdclient=$_POST['passwordclient'];
+    $confpwdclient=$_POST['confpasswordclient'];
+    $emailclient=$_POST['emailclient'];
+   if (empty($nomclient)||empty($prenomclient)||empty($pwdclient)||empty($confpwdclient)||empty($imgprofilclient)) {
+       $error_admin="opligatoir";
+   }else {
+	if ($pwdclient!=$confpwdclient){
+		echo $error_pwd="password incrocet ";
+	}
+   }
+
+	
+
+    }
+	echo $nomclient;
+	echo $prenomclient;
+	echo $pwdclient;
+	echo $imgprofilclient;
+	echo $confpwdclient;
+   
+ 
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,15 +45,22 @@
        <link rel="stylesheet" href="././public/css/signcreateur.css">
        <link href="././public/css/styles.css" rel="stylesheet" />
 
-     
+    <style>
+		body{
+			color:red !important;
+		}
+	</style>
 	   <title>SignCLIENT in</title>
     </head>
     
 <body>
         
     <div class="wrapper ">
-		<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Inscription<img src="https://img.icons8.com/color/48/undefined/join-skin-type-7.png"/></p>
-		<form class="p-3 mt-3">
+		
+	<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Inscription<img src="https://img.icons8.com/color/48/undefined/join-skin-type-7.png"/></p>
+		<form class="p-3 mt-3" method="post">
+		<span> <?php  echo $error_admin; ?></span>
+
 			<div class="form-field d-flex align-items-center">
 				
                 <img src="https://img.icons8.com/color/40/undefined/circled-user-male-skin-type-7--v1.png"/>	
@@ -45,7 +90,7 @@
 				<img src="https://img.icons8.com/ios-filled/40/undefined/good-pincode.png"/>			
 				<input type="password" name="confpasswordclient" id="confpwdclient" placeholder="Confirm Password">
 			</div>
-		<input type="submit" name="loginclient" class="btn mt-3" value="Inscription">
+		<input type="submit" name="signupclient" class="btn mt-3" value="Inscription">
 		</form>
 		<div class="text-center fs-6">
         <a class="  fs-5" href="login">login</a>

@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -45,7 +45,9 @@
         <div class="  mt-3 table-wrapper" style="height:100vh">
             <div class="table-title">
                 <div class="">
+      
                     <div class="col">
+                        
                     <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 " style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button>
                     <!-- <a href="#addetud"   data-bs-toggle="modal" data-bs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
                     </div>
@@ -53,7 +55,7 @@
                 </div>
             </div>
             <div class="table-responsive " style=" margin-left: 94px;">
-
+            <span> <? $error ?></span>
                 <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                     <thead>
                         <tr style="  background-color:#ab64a26a;">
@@ -65,33 +67,34 @@
                         </tr>
                     </thead>
                     <tbody class="fw-bold">
-                                <tr class="bg-blue">
-                                    <td >1</td>
-                                    <td class="text-nowrap">ADMIN</td>
-                                    <td class="text-nowrap">admin@gmail.com</td>
-                                    <td class="text-nowrap">2001</td>
+               
+             
+                    <tr class="bg-blue">
+                    <?php 
+                        $admine = new AdministrateurController();
+                        $admines=$admine->getAlladmin();
+                        foreach($admines as $admine){
+                           
+                    ?>
+                    <tr>
+                        <td><?php echo $admine['idadmin']?></td>
+                        <td><?= $admine['nom_complet_admin'] ?></td>
+                        <td><?= $admine['email_admin'] ?></td>
+                        <td><?= $admine['password_admin'] ?></td>
+
                                     <td class="d-flex  align-items-start">
-                                        <a href="../views/Updatadmin.php"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
-                                        <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
+                                    <button name="idadmine" class="btn btn-outline-primary  fw-bold update" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
+                                    <form action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletid" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">
+                                        <input type="text" hidden name="idadmine" value="<?= $admine['idadmin']?>  "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
+                                    </form>    
                                     </td>
                                 </tr>
+                                
+                  <?php } ?>
                                 <tr id="spacing-row">
                                 <td></td>
                                 </tr>
-                                <tr class="bg-blue">
-                                    <td >1</td>
-                                    <td class="text-nowrap">ADMIN</td>
-                                    <td class="text-nowrap">admin@gmail.com</td>
-                                    <td class="text-nowrap">2001</td>
-                                    <td class="d-flex  align-items-start">
-                                        <a href="#"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a>
-                                        <a href="#"><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></a>
-                                    </td>
-                                </tr>
-                                <tr id="spacing-row">
-                                <td></td>
-                                </tr>
-                        
+                             
                     </tbody>
                 </table>
             </div>
@@ -106,12 +109,14 @@
 <div class="modal-dialog">
      <div class="modal-content">
        <div class="modal-header">
+          
           <h5 class="modal-title" id="exampleModalLabel">Add Admin</h5>
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate>
-           <div class="mb-3 fw-bold">
+        <form class="form-container" action="operation"  method="POST" data-parsley-validate>
+          
+        <div class="mb-3 fw-bold">
                                
            <label for="exampleFormControlInput1" class="form-label">Nom complet</label>
             <input type="text" class="form-control" id="nomadmin" name="nomadmin" placeholder="Enter name complet" style="margin-bottom: 32px;" data-parsley-length="[4, 20]" data-parsley-trigger="change" required>
@@ -125,16 +130,81 @@
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="passwordadmin" name="passwordadmin" placeholder="Enter passwordadmin" required data-parsley-trigger="change">
              </div>
-             <input type="button"  class="btn btn-outline-warning btn-lg  " style="background-color:#ab64a26a; color:#410839" name="Addadmin" value="ADD Admin">
+        
+             <input type="submit" class="btn btn-outline-warning btn-lg  " style="background-color:#ab64a26a; color:#410839" name="Addadmin" value="ADD Admin" >
              <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
 
         </form>
+
         </div>
-</div>
+    </div>
 </div>
       </div>
-  
+      <!-- update  Admin-->
+      <div class="modal fade" id="myModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Admine </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form class="form-container" action="operation" method="POST" >  
+                                   <div class="mb-3  fw-bold"  >
+                                        <input type="text" class="form-control" hidden  name="idadmine" id="idadmin"  >
+             
+                                    </div>
+                                    <div class="mb-3  fw-bold"  >
+                                        <label for="exampleFormControlInput1" class="form-label">Nom Complet </label>
+                                        <input type="text" class="form-control" name="updnamAdmie" id="updnamAdmi"    placeholder="Enter le name">
+             
+                                    </div>
+                           
+                                    <div class="mb-3  fw-bold"  >
+                                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                        <input type="text" class="form-control" name="updemailadme" id="updemailadm"    placeholder="Enter le Prénom">
+             
+                                    </div>
+                                    <div class="mb-3  fw-bold"  >
+                                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                                        <input type="text" class="form-control" name="UpdpasswordAdmine" id="UpdpasswordAdmin"    placeholder="Enter le Prénom">
+             
+                                    </div>
+         
+                                <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="updateAdmin" class="btn btn-primary ">update</button>
+                                </div>
+                            </form>              
+                    </div>
+                    <div class="modal-footer">
+                  
+                </div>
+            </div>
+        </div>
+       
+        </div>
 	
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+
+    $("#myTable").on('click','.update',function(){
+        
+        var coluodateadmin=$(this).closest("tr"); 
+        colnomcoplid=coluodateadmin.find("td:eq(0)").text(); 
+        colnomcopladm=coluodateadmin.find("td:eq(1)").text(); 
+        colemailadm=coluodateadmin.find("td:eq(2)").text(); 
+        colpwdadm=coluodateadmin.find("td:eq(3)").text(); 
+        $('#idadmin').val(colnomcoplid);
+        $('#updnamAdmi').val(colnomcopladm);
+        $('#updemailadm').val(colemailadm);
+        $('#UpdpasswordAdmin').val(colpwdadm);
+
+
+        }
+       )
+    })
+</script>

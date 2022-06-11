@@ -1,60 +1,45 @@
 <?php
+include('../Anastasia_fashion_FR/database/connexiondb.php');
+	class Administrateur extends Connextiondb
+	{
+		public function creatAdmine($Nom_completadm, $emailadm, $passwordadmin){
 
-// class Administrateur extends Connexiondb
-// {
-//    public function creatAdmine($nom, $prenom, $role, $password){
+			$querinsertadm=$this->connect()->exec("INSERT INTO admines (`idadmin` ,`nom_complet_admin`, `email_admin`, `password_admin`) VALUES (NULL,'$Nom_completadm','$emailadm','$passwordadmin')");
+			if ($querinsertadm) {
+				return true;
+			}else{
+			return false;
+		    }
 
-//        $reqinsert=$this->connect()->exec("INSERT INTO administrateurs (`Matricule`, `Nom`, `Prenom`, `Role`, `password`) VALUES (NULL,'$nom','$prenom','$role','$password')");
+		}
 
-//        if ($reqinsert) {
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }
+		public function afficheAdmin(){
+
+			$queraffadmin="SELECT * FROM  admines ";
+			return $prepare=$this->connect()->query($queraffadmin)->fetchALL();
+
+		}
+
+		public function updatAdmin($NomCompAdmin,$emailAdmn,$passwordadmn,$updatAdmin){
+
+			$requpdateAdmin=" UPDATE `admines` SET `nom_complet_admin`='$NomCompAdmin',`email_admin`='$emailAdmn',`password_admin`='$passwordadmn' WHERE `idadmin`='$updatAdmin'";
+			$resupdate=$this->connect()->exec($requpdateAdmin);
+			if ($requpdateAdmin) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		public function deletadmin($iddeletadm){
+			$reqdeletAdmin=$this->connect()->exec("DELETE FROM `admines` WHERE `idadmin`='$iddeletadm' ");
+			return     $reqdeletAdmin;
+		}
+	} 
+	
+
    
-//    public function afficheAdmin(){
 
-//     if(isset($_POST['search']))
-//     {
-//        $search=$_POST['search'];
-//        $query="SELECT * FROM administrateurs WHERE Matricule LIKE ? OR Nom LIKE ? OR Prenom LIKE ? OR 'Role' LIKE ? " ;
-//        $query=$this->GetData($query);
-//        $query->execute(['%'.$search.'%','%'.$search.'%','%'.$search.'%','%'.$search.'%']);
-//        return $query->fetchAll();
-
-//      }else{
-
-//        $sql="SELECT * FROM  administrateurs ";
-//        return $prepare=$this->connect()->query($sql)->fetchALL();
-
-//      }
-
-//    }
-
-//    public function deletadmin($iddelet){
-
-//        $ressdelet=$this->connect()->exec("DELETE FROM `administrateurs` WHERE Matricule='$iddelet' ");
-//        return     $ressdelet;
-//    }
-
-//    public function updatAdmin($Nom,$Prenom,$Role,$password,$Updateid){
-
-//        $requpdate=" UPDATE `administrateurs` SET `Nom`='$Nom',`Prenom`='$Prenom',`Role`='$Role',`password`='$password' WHERE `Matricule`='$Updateid'";
-
-//        $resupdate=$this->connect()->exec($requpdate);
-
-//        if ($requpdate) {
-
-//            return true;
-           
-//        }else{
-//          return false;
-
-//            }
-
-//        }
-// }
 
 
 ?>

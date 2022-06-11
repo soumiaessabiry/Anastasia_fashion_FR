@@ -1,15 +1,19 @@
-<?php 
-class Connexiondb{
-    static public function connexion(){
-
-       $conn=new PDO("mysql:host=localhost;dbname=anastasia fashion" ,"root","");
-       $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
-       return $conn;
-      
-       
+<?php
+class Connextiondb
+{
+   
+    public  function connect()
+    {
+      $conn = new PDO("mysql:host=localhost;dbname=anastasia fashion" ,"root" ,"");
+        return $conn;
     }
+    public function GetData($req)
+  {
+    try
+    {
+    return $this->connect()->prepare($req);
+    }catch (PDOException $ex) {echo $ex->getMessage();}
+  }
+
+
 }
-
-
-
-?>

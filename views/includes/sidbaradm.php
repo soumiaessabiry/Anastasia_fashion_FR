@@ -78,7 +78,7 @@
             </ul>
           </div>
       </div>
-      <script>
+      <!-- <script>
         $(document).ready(function(){
           $(".hamburger .hamburger__inner").click(function(){
             $(".wrapper").toggleClass("active")
@@ -88,4 +88,4 @@
             $(".profile_dd").toggleClass("active");
           });
         })
-	</script>
+	</script> -->

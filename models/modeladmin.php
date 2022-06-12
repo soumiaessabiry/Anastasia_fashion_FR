@@ -1,6 +1,6 @@
 <?php
-include('../Anastasia_fashion_FR/database/connexiondb.php');
-	class Administrateur extends Connextiondb
+require_once('../Anastasia_fashion_FR/database/connexiondb.php');
+class Administrateur extends Connextiondb
 	{
 		public function creatAdmine($Nom_completadm, $emailadm, $passwordadmin){
 

@@ -7,4 +7,9 @@ $Controller = new AdministrateurController();
    $Controller->updateadmin();
    $Controller->deleteadmin();
 
+
+   $Controller->adddesigner();
+   $Controller->updatedesigner();
+   $Controller->deletedesigner();
+
  ?>

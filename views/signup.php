@@ -1,41 +1,4 @@
 
-<?php
-$nomclient="";
-$prenomclient="";
-$pwdclient="";
-$confpwdclient="";
-$imgprofilclient="";
-$error_admin="";
-if (isset($_POST["signupclient"])) {
-
-	$imgprofilclient=$_POST['imgprofilclient'];
-	$nomclient=$_POST['nomclient'];
-    $prenomclient=$_POST['prenomclient'];
-    $pwdclient=$_POST['passwordclient'];
-    $confpwdclient=$_POST['confpasswordclient'];
-    $emailclient=$_POST['emailclient'];
-   if (empty($nomclient)||empty($prenomclient)||empty($pwdclient)||empty($confpwdclient)||empty($imgprofilclient)) {
-       $error_admin="opligatoir";
-   }else {
-	if ($pwdclient!=$confpwdclient){
-		echo $error_pwd="password incrocet ";
-	}
-   }
-
-	
-
-    }
-	echo $nomclient;
-	echo $prenomclient;
-	echo $pwdclient;
-	echo $imgprofilclient;
-	echo $confpwdclient;
-   
- 
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,8 +21,7 @@ if (isset($_POST["signupclient"])) {
     <div class="wrapper ">
 		
 	<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Inscription<img src="https://img.icons8.com/color/48/undefined/join-skin-type-7.png"/></p>
-		<form class="p-3 mt-3" method="post">
-		<span> <?php  echo $error_admin; ?></span>
+		<form class="p-3 mt-3" method="post" action="operation">
 
 			<div class="form-field d-flex align-items-center">
 				

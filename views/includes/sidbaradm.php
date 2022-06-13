@@ -12,19 +12,16 @@
       <a class="navbar-brand" href="#!"><img src="././public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></a>
 
       </div>
-      <div class="right_menu">
-        <ul>
-          <li>
-          <img  class="fas " src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-7--v1.png"/>
-            <div class="profile_dd">
-               <div class="dd_item"><a href="profilAdmin">Profile</a></div>
-               <div class="dd_item">Logout</div>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> <img  class="fas " src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-7--v1.png"></a>             
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="profilAdmin">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
             </div>
-          </li>
-        </ul>
       </div>
     </div>
-  </div>
+
     
   <div class="main_container">
       <div class="sidebar">

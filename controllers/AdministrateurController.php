@@ -85,6 +85,32 @@ class AdministrateurController  {
 						if($Designer->deletdesigner($_POST['iddesignere'])) header('location:fashiondesigner');
 						} 
 					}
+
+
+      // ********************************Client*************************************************** 
+
+		public function addClient(){
+
+		if (isset($_POST['signupclient'])){ 
+			$client=new Client();
+			$imgprofilclient=$_POST['imgprofilclient'];
+			$nomclient=$_POST['nomclient'];
+			$prenomclient=$_POST['prenomclient'];
+			$emailclient=$_POST['emailclient'];
+			$pwdclient=$_POST['passwordclient'];
+			$confpwdclient=$_POST['confpasswordclient'];
+			if ($pwdclient ===$confpwdclient) {
+				if($client->creatclinet($imgprofilclient,$nomclient,$prenomclient,$emailclient,$pwdclient,$confpwdclient)) header('location:login');
+			}else echo 'eroooooor !!!!';
+
+		}
+		}
+
+		public function getAllClient(){
+
+		$client=new Client();
+		return $client->afficheclient();  
+
+}
 }
 ?>
-

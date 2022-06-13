@@ -28,8 +28,8 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder" style="color:#dda2d5; font-family: monospace;">Anastasia Fashion</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Looking for quality and reliability?? Anastasia welcomes you <span><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-flat-bearicons.png"/></span></p>
-                    <a href="signup"> <button class=" btn glow-on-hover example butsigup fw-bold p-4  fs-2" style="color: #FFF;  " > <img src="https://img.icons8.com/ios-glyphs/35/000000/user--v1.png" alt="">sign up here </button></a>
+                    <p class="lead fw-bold text-white-50 mb-0">Looking for quality and reliability?? Anastasia welcomes you <span><img src="https://img.icons8.com/external-bearicons-flat-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-flat-bearicons.png"/></span></p>
+                    <a href="#"> <button class=" btn glow-on-hover example butsigup fw-bold p-4  fs-2" style="color: #FFF;font-family: monospace;  " > Anastasia Fashion </button></a>
                 </div>
             </div>
         </header>
@@ -51,7 +51,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="panier">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="showproduct">Add to cart</a></div>
                             </div>
                         </div>
                     </div>

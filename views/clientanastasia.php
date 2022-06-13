@@ -50,11 +50,11 @@
                         
                         </div>
                     </div>
-                    <div class="table-responsive " style=" margin-left: 94px;">
+                    <div class="table-responsive "style="width: 1553px; margin-left: 271px;">
                     <table class="table table-striped table align-middle" id="myTableclient">
                         <thead>
                             <tr style=" background:#a80893c3;">
-                                <th hidden>id</th>
+                                <th >id</th>
                                 <th >Profil</th>
                                 <th>Prenon</th>
                                 <th>Nom</th>
@@ -64,14 +64,21 @@
                         </thead>
                         <tbody class="fw-bold">
                                     <tr class="bg-client">
-                                        <td ><img src="https://img.icons8.com/ios-filled/40/undefined/user-female-circle.png"/></td>
-                                        <td hidden >1</td>
-                                        <td class="text-nowrap">prenon client</td>
-                                        <td class="text-nowrap">Nomclient </td>
-                                        <td class="text-nowrap">client@gmail.com</td>
-                                        <td class="text-nowrap">2001</td>
-                                       
+                                    <?php 
+                            $client = new AdministrateurController();
+                            $clientes=$client->getAllClient();
+                            foreach($clientes as $client){
+                             ?>
+                                        <tr>
+                                            <td><?= $client['id_client'] ?></td>
+                                            <td  style="width:50px;"><?= $client['profil_client'] ?></td>
+                                            <td><?= $client['prenom_client'] ?></td>
+                                            <td><?= $client['nom_client'] ?></td>
+                                            <td><?= $client['email_client'] ?></td>
+                                            <td><?= $client['password_client'] ?></td>
+                                        </tr>
                                     </tr>
+                                    <?php } ?>  
                                     <tr id="spacing-row">
                                     <td></td>
                                     </tr>

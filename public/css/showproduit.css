@@ -10,10 +10,10 @@ body {
     float: left;
     font-family: 'Lato', Arial, sans-serif;
     font-size: 16px;
-    margin: 10px 1%;
-    max-width: 210px;
-    min-width: 210px;
-    max-height: 710px;
+    margin: 22px 1% !important;
+    max-width: 350px !important;
+    min-width: 210px !important;
+    max-height: 710px !important;
     overflow: hidden;
     position: relative;
     text-align: left;

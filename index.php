@@ -9,19 +9,27 @@ if(basename($_SERVER['REQUEST_URI'])==="home" || basename($_SERVER['REQUEST_URI'
 if(basename($_SERVER['REQUEST_URI'])==="operation" ){
 require_once('../Anastasia_fashion_FR/models/modeladmin.php');
 require_once('../Anastasia_fashion_FR/models/modeldesigner.php');
+require_once('../Anastasia_fashion_FR/models/modelclient.php');
 require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
 
 }
 if(basename($_SERVER['REQUEST_URI'])==="fashiondesigner" ){
 // require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
 require_once('../Anastasia_fashion_FR/models/modeldesigner.php');
+}
+if(basename($_SERVER['REQUEST_URI'])==="signup" ){
+require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
+require_once('../Anastasia_fashion_FR/models/modelclient.php');
 
-// // include('../Anastasia_fashion_FR/database/connexiondb.php');
 
 }
-// if(basename($_SERVER['REQUEST_URI'])==="Updatadmin" ){
-//   include('../Anastasia_fashion_FR/');
-// }
+if(basename($_SERVER['REQUEST_URI'])==="clientanastasia" ){
+require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
+require_once('../Anastasia_fashion_FR/models/modelclient.php');
+
+
+}
+
 
 if(basename($_SERVER['REQUEST_URI'])==="updatepoduit"|| basename($_SERVER['REQUEST_URI'])==="produiddesigner" || basename($_SERVER['REQUEST_URI'])==="dashborddesigner"||basename($_SERVER['REQUEST_URI'])==="clientdesigner"||basename($_SERVER['REQUEST_URI'])==="profilfashiondes"||basename($_SERVER['REQUEST_URI'])==="commanddesigner"){
   require_once('views/includes/sidebardesigner.php') ;
@@ -40,11 +48,11 @@ require_once('./controllers/HomeController.php');
 $home =new HomeController();
 $pages=
   [
-      'updatepoduit','updatefashiondes','Updatadmin','showproduct',
+      'updatepoduit','showproduct',
       'profilAdmin','profilfashiondes','produiddesigner','productanastasia',
       'login','fashiondesigner','dashborddesigner','Dashboardadmin','commanddesigner',
       'clientdesigner','clientanastasia','allproduct','Admin','sidebar','sidebardesigner',
-      'home','commandanastasia','sidbaradm','panier','logout','404','signup','operation','modeladmin','modeldesigner'
+      'home','commandanastasia','sidbaradm','panier','logout','404','signup','operation','modeladmin','modeldesigner','modelclient'
   ];
 if(isset($_GET['page'])){
   if(in_array($_GET['page'],$pages)){

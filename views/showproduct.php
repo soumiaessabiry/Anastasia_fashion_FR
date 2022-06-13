@@ -15,13 +15,13 @@
    
   </head>
     <body> 
-        <main style="margin-top: 100px;">
+        <main style="margin-top: 50px;">
             <!-- DEMO HTML -->
    
             <div class="container bg-white ">
 
                 <div class=" row d-flex justify-content-center container mt-5">
-                    <figure class="col-lg-5 col-sm-12  snip1527">
+                    <figure class="col-lg-8 col-sm-12  snip1527" style="width: 100%;">
                     <div class="image"><img src="././public/image/prod6.jpg" alt="pr-sample23" />
                     </div>
                         <figcaption>
@@ -31,7 +31,7 @@
                         </figcaption>
                         <a href="#"></a>
                     </figure>
-                    <figure class="col-lg-5 col-sm-12   ">
+                    <figure class="col-lg-8 col-sm-12   ">
                         <figcaption>
                             <div class="card text-center" style=" margin: 16px auto;" >
                                 <div class="card-header fw-bold " style="background: #ab64a26a;"> Commande</div>

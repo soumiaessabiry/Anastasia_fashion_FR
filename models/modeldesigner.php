@@ -20,16 +20,7 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 			return $prepare=$this->connect()->query($queraffichdesigner)->fetchALL();
 
 		}
-		// public function updatdesigner($imge_Designerupd, $Nom_Designerupd, $Prenom_Designerup, $Cin_Designerupd, $Email_Designerupd, $password_Designerupd, $id_designerupd){
-
-		// 	$requpdfashdesigner="UPDATE `designer_fashion` SET `profil_designer`='$imge_Designerupd',`nom_designer`='$Nom_Designerupd',`prenom_designer`='$Prenom_Designerup',`cin_designer`='$Cin_Designerupd',`email_designer`='$Email_Designerupd',`password_designer`='$password_Designerupd' WHERE `id_designer`='$id_designerupd'";
-		// 	$requpdfashdes=$this->connect()->exec($requpdfashdesigner);
-		// 	if ($requpdfashdesigner) {
-		// 		return true;
-		// 	}else{
-		// 		return false;
-		// 	}
-		// }
+		
 		public function updatdesigner($imge_Designerupd,$Nom_Designerupd,$Prenom_Designerup,$Cin_Designerupd,$Email_Designerupd,$password_Designerupd,$id_designerupd){
 
 			$requpdateAdmin=" UPDATE `designer_fashion` SET`profil_designer`='$imge_Designerupd',`nom_designer`='$Nom_Designerupd',`prenom_designer`='$Prenom_Designerup',`cin_designer`='$Cin_Designerupd',`email_designer`='$Email_Designerupd',`password_designer`='$password_Designerupd' WHERE `id_designer`='$id_designerupd'";

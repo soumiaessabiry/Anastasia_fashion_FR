@@ -39,6 +39,11 @@
                     <div class="card-body">
                     <h5 class="card-title fw-bold bg-bleu">Admins</h5>
                     <p class="card-text fw-bold fs-3">Totale Admin Anastasia</p>
+                   <H1> <?php 
+                       $admine = new AdministrateurController();
+                      echo count($admine->getAlladmin());            
+                      ?>
+                    </H1>
                     </div>
                 </div>
             </div>
@@ -50,6 +55,12 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold ">Fashion designern</h5>
                         <p class="card-text fw-bold fs-3">Totale Fashion designer Anastasia</p>
+                        <H1> <?php 
+                            $designer = new AdministrateurController();
+                            echo count($designer->getAlldesigner());
+                                   
+                            ?>
+                    </H1>
                     </div>
                 </div>
             </div>
@@ -60,6 +71,13 @@
                     <div class="card-body">
                     <h5 class="card-title fw-bold ">Cliens Anastasia</h5>
                         <p class="card-text fw-bold fs-3">Totale Client Anastasia</p>
+                        <H1> 
+                            <?php 
+                            $client = new AdministrateurController();
+                            echo count($client->getAllClient());
+                         
+                            ?>
+                    </H1>
                     </div>
                 </div>
             </div>

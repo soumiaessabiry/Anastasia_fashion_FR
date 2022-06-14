@@ -37,20 +37,19 @@
 <body>
 <div class="wrapper">
 
-    <div class="">
-        <div class="" >
+<div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
             <div class="  mx-3 mt-3 table-wrapper" style="height:100vh">
                     <div class="table-title">
                         <div class="">
                             <div class="col">
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#53104aa6; margin-left: 67px; margin-top: 75px;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
+                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#53104aa6; margin-left:215px;margin-top: 75px;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
                             <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
                             </div>
                         
                         </div>
                     </div>
                     <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTable">
+                    <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                         <thead>
                             <tr style=" background-color: #53104aa6;">
                                 <th  hidden >idproduct</th>
@@ -93,8 +92,6 @@
         </div>
 
     </div>
-
-</div>
 	
 
 </body>

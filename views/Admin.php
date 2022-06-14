@@ -52,7 +52,7 @@
       
                     <div class="col">
                         
-                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 " style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button>
+                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 " style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal"> Admin Anasatasia <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button>
                     </div>
                    
                 </div>
@@ -60,43 +60,41 @@
             <div class="table-responsive " style=" margin-left: 94px;">
                 <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                     <thead>
-                        <tr style="  background-color:#ab64a26a;">
                             <th >id</th>
-                            <th>Nom complet</th>
+                            <th>Nom </th>
+                            <th>Prenom</th>
+                            <th>Role</th>
                             <th>Email</th>
                             <th>Password</th>
                             <th>Options</th>
                         </tr>
                     </thead>
                     <tbody class="fw-bold">
-               
-             
-                    <tr class="bg-blue">
-                    <?php 
-                        $admine = new AdministrateurController();
-                        $admines=$admine->getAlladmin();
-                        foreach($admines as $admine){
-                           
-                    ?>
-                    <tr>
-                        <td><?php echo $admine['idadmin']?></td>
-                        <td><?= $admine['nom_complet_admin'] ?></td>
-                        <td><?= $admine['email_admin'] ?></td>
-                        <td><?= $admine['password_admin'] ?></td>
-
-                                    <td class="d-flex  align-items-start">
-                                    <button name="idadmine" class="btn btn-outline-primary  fw-bold update" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
-                                    <form action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletid" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">
-                                        <input type="text" hidden name="idadmine" value="<?= $admine['idadmin']?>  "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
-                                    </form>    
-                                    </td>
-                                </tr>
-                                
-                  <?php } ?>
-                                <tr id="spacing-row">
-                                <td></td>
-                                </tr>
-                             
+                
+                
+                        <tr class="bg-blue">
+                        <?php 
+                            $admine = new AdministrateurController();
+                            $admines=$admine->getAlladmin();
+                            foreach($admines as $admine){
+                            
+                        ?>
+                        <tr>
+                            <td><?php echo $admine['id_user']?></td>
+                            <td><?= $admine['nom_user'] ?></td>
+                            <td><?= $admine['prenom_user'] ?></td>
+                            <td><?= $admine['role_user'] ?></td>
+                            <td><?= $admine['email_user'] ?></td>
+                            <td><?= $admine['password_user'] ?></td>
+                            <td class="d-flex  align-items-start">
+                            <button name="idadmine" class="btn btn-outline-primary  fw-bold update" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
+                            </td>
+                        </tr>          
+                        <?php } ?>
+                        <tr id="spacing-row">
+                        <td></td>
+                        </tr>  
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -105,37 +103,7 @@
 </div>
 
 </div>
-<!-- model add Admin -->
-   <!-- Modal -->
-   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Admin</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <form class="form-container" action="operation"  id="formAdd" method="POST" data-parsley-validate="">
-            <div class="mb-3 fw-bold">
-                <label for="exampleFormControlInput1" class="form-label">Nom complet</label>
-                <input type="text" class="form-control" id="nomadmin" name="nomadmin" placeholder="Enter name complet" style="margin-bottom: 32px;"  data-parsley-error-message="Veuillez entrer le nom sof des  lettres " minlength="4" maxlength="10" data-parsley-trigger="change" required="">
-            </div>
-            <div class="mb-3  fw-bold">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                <input type="email" data-parsley-type="email" class="form-control" id="emailadmin" name="emailadmin" placeholder="Enter Email" data-parsley-error-message="This value is required.  " minlength="8" maxlength="16" data-parsley-trigger="change" required="">
-            </div>
-            <div class="mb-3  fw-bold">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="passwordadmin" name="passwordadmin" placeholder="Enter passwordadmin" data-parsley-error-message="Veuillez entrer le mot de passe entre 4 et 8 " minlength="4" maxlength="10" data-parsley-trigger="change" required="">
-            </div>
-            <input type="submit" class="btn btn-outline-warning btn-lg  " style="background-color:#ab64a26a; color:#410839" name="Addadmin" value="ADD Admin" >
-            <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
-        </form>
 
-        </div>
-    </div>
-</div>
-      </div>
       <!-- update  Admin-->
     <div class="modal fade" id="myModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -151,10 +119,19 @@
     
                         </div>
                         <div class="mb-3  fw-bold"  >
-                            <label for="exampleFormControlInput1" class="form-label">Nom Complet </label>
+                            <label for="exampleFormControlInput1" class="form-label">Nom  </label>
                             <input type="text" class="form-control" name="updnamAdmie" id="updnamAdmi"   data-parsley-error-message="Veuillez entrer le nom sof des  lettres " minlength="4" maxlength="10" data-parsley-trigger="change" required="">
                         </div>
-                
+                        <div class="mb-3  fw-bold"  >
+                            <label for="exampleFormControlInput1" class="form-label">Prenom </label>
+                            <input type="text" class="form-control" name="updprenAdmin" id="updprenAdmi"   data-parsley-error-message="Veuillez entrer le nom sof des  lettres " minlength="4" maxlength="10" data-parsley-trigger="change" required="">
+                        </div>
+                        <div class="mb-3  fw-bold">
+                            <label for="exampleFormControlInput1" class="form-label">Role</label><br>
+                            <select name="roleupd" id="roleadm">
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </div   
                         <div class="mb-3  fw-bold"  >
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
                             <input type="text" class="form-control" name="updemailadme" id="updemailadm"   data-parsley-error-message="This value is required.   " minlength="8" maxlength="22" data-parsley-trigger="change" required="">
@@ -187,11 +164,15 @@
         
         var coluodateadmin=$(this).closest("tr"); 
         colnomcoplid=coluodateadmin.find("td:eq(0)").text(); 
-        colnomcopladm=coluodateadmin.find("td:eq(1)").text(); 
-        colemailadm=coluodateadmin.find("td:eq(2)").text(); 
-        colpwdadm=coluodateadmin.find("td:eq(3)").text(); 
+        colnomadupd=coluodateadmin.find("td:eq(1)").text(); 
+        colpreadmupd=coluodateadmin.find("td:eq(2)").text(); 
+        colroladmupd=coluodateadmin.find("td:eq(3)").text(); 
+        colemailadm=coluodateadmin.find("td:eq(4)").text(); 
+        colpwdadm=coluodateadmin.find("td:eq(5)").text(); 
         $('#idadmin').val(colnomcoplid);
-        $('#updnamAdmi').val(colnomcopladm);
+        $('#updnamAdmi').val(colnomadupd);
+        $('#updprenAdmi').val(colpreadmupd);
+        $('#roleadm').val(colroladmupd);
         $('#updemailadm').val(colemailadm);
         $('#UpdpasswordAdmin').val(colpwdadm);
 

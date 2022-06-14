@@ -58,11 +58,10 @@
                 <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                     <thead>
                         <tr style="  background-color:#410839c3; color:aliceblue">
-                            <th >Profil</th>
                             <th >id</th>
                             <th>Nom </th>
                             <th>Prenom </th>
-                            <th>CIN </th>
+                            <th>Role </th>
                             <th>Email</th>
                             <th>Password</th>
                             <th>Options</th>
@@ -78,17 +77,17 @@
                              ?>
 
                             <tr>
-                                <td  style="width:50px;"><?= $designer['profil_designer'] ?></td>
-                                <td><?= $designer['id_designer'] ?></td>
-                                <td><?= $designer['nom_designer'] ?></td>
-                                <td><?= $designer['prenom_designer'] ?></td>
-                                <td><?= $designer['cin_designer'] ?></td>
-                                <td><?= $designer['email_designer'] ?></td>
-                                <td><?= $designer['password_designer'] ?></td>
+
+                                <td><?= $designer['id_user'] ?></td>
+                                <td><?= $designer['nom_user'] ?></td>
+                                <td><?= $designer['prenom_user'] ?></td>
+                                <td><?= $designer['role_user'] ?></td>
+                                <td><?= $designer['email_user'] ?></td>
+                                <td><?= $designer['password_user'] ?></td>
                                     <td class="d-flex  align-items-start">
                                         <button name="iddesignere" class="btn btn-outline-primary  fw-bold updatefachdesg" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
                                         <form  action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletdesigner" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">
-                                            <input type="text" hidden name="iddesignere" value="<?= $designer['id_designer'] ?> "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
+                                            <input type="text" hidden name="iddesignere" value="<?= $designer['id_user'] ?> "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
                                         </form> 
                                     </td>
                                 
@@ -123,18 +122,17 @@
                                 <label for="exampleFormControlInput1" class="form-label">Nom </label>
                                 <input type="text" class="form-control" id="nomdesfas" name="nomdesfas" placeholder="Enter nom" style="margin-bottom: 32px;"   data-parsley-error-message="This value is required.   " minlength="4" maxlength="12" data-parsley-trigger="change" required=""  >
                             </div>
-                        <div class="mb-3 fw-bold">
+                           <div class="mb-3 fw-bold">
                                 <label for="exampleFormControlInput1" class="form-label">Prenom</label>
                                 <input type="text" class="form-control" id="prenomdesfas" name="prenomdesfas" placeholder="Enter prenom" style="margin-bottom: 32px;"   data-parsley-error-message="This value is required.   " minlength="4" maxlength="12" data-parsley-trigger="change" required=""  >
                             </div>
-                        <div class="mb-3 fw-bold">
-                                <label for="exampleFormControlInput1" class="form-label">CIN</label>
-                                <input type="text" class="form-control" id="cindesfas" name="cindesfas" placeholder="Enter CIN" style="margin-bottom: 32px;"   data-parsley-error-message="This value is required.   " minlength="8" maxlength="8" data-parsley-trigger="change" required=""  >
-                            </div>
-                            <div class="mb-3 fw-bold">
-                                <label for="exampleFormControlInput1" class="form-label"></label>
-                                <input type="file" class="form-control" id="profdesfas" name="profdesfas" placeholder="Enter profil" style="margin-bottom: 32px;"   data-parsley-error-message="This value is required.   " data-parsley-trigger="change" required=""  >
-                            </div>
+                            <div class="mb-3  fw-bold">
+                                    <label for="exampleFormControlInput1" class="form-label">Role</label><br>
+                                    <select name="role" id="role">
+                                        <option value="Designer">Designer</option>
+                                    </select>
+                                </div>
+                           
                             
                             <div class="mb-3  fw-bold">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -177,15 +175,13 @@
                             <label for="exampleFormControlInput1" class="form-label">Prenom</label>
                             <input type="text" class="form-control" id="prenomdesfasupde" name="prenomdesfasupd" placeholder="Enter prenom" style="margin-bottom: 32px;"    minlength="4" maxlength="10" data-parsley-trigger="change" required=""  >
                         </div>
-                        <div class="mb-3 fw-bold">
-                            <label for="exampleFormControlInput1" class="form-label">CIN</label>
-                            <input type="text" class="form-control" id="cindesfasupde" name="cindesfasupd" placeholder="Enter CIN" style="margin-bottom: 32px;"     minlength="8" maxlength="8" data-parsley-trigger="change" required=""  >
-                         </div>
-                         <div class="mb-3 fw-bold">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="text" class="form-control" id="profdesfasupde" name="profdesfasupd" placeholder="Enter profil" style="margin-bottom: 32px;"    data-parsley-trigger="change" required=""  >
-                        </div>
-                        
+                      
+                        <div class="mb-3  fw-bold">
+                            <label for="exampleFormControlInput1" class="form-label">Role</label><br>
+                            <select name="roleupd" id="role">
+                                <option value="designer">Designer</option>
+                            </select>
+                        </div>    
                         <div class="mb-3  fw-bold">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
                             <input type="email" data-parsley-type="email" class="form-control" id="emaildesfasupde" name="emaildesfasupd" placeholder="Enter Email"  minlength="8" maxlength="30" data-parsley-trigger="change" required="">
@@ -213,18 +209,16 @@
         $("#myTable").on('click','.updatefachdesg',function(){
             
             var colupddesigner=$(this).closest("tr");
-            colprofdesigupd=colupddesigner.find("td:eq(0)").text(); 
-            coliddesupd=colupddesigner.find("td:eq(1)").text(); 
-            colnomdesupd=colupddesigner.find("td:eq(2)").text(); //*
-            colprendesupd=colupddesigner.find("td:eq(3)").text(); //*
-            colcindesiupd=colupddesigner.find("td:eq(4)").text(); //*
-            colemaildesupd=colupddesigner.find("td:eq(5)").text(); 
-            colpwddesupd=colupddesigner.find("td:eq(6)").text(); 
+            coliddesupd=colupddesigner.find("td:eq(0)").text(); 
+            colnomdesupd=colupddesigner.find("td:eq(1)").text(); 
+            colprendesupd=colupddesigner.find("td:eq(2)").text(); 
+            colroleupd=colupddesigner.find("td:eq(3)").text(); 
+            colemaildesupd=colupddesigner.find("td:eq(4)").text(); 
+            colpwddesupd=colupddesigner.find("td:eq(5)").text(); 
             $('#id_designer').val(coliddesupd);
             $('#nomdesfasupde').val(colnomdesupd);
             $('#prenomdesfasupde').val(colprendesupd);
-            $('#cindesfasupde').val(colcindesiupd);
-            $('#profdesfasupde').val(colprofdesigupd);
+            $('#role').val(colprendesupd);
             $('#emaildesfasupde').val(colemaildesupd);
             $('#passworddesfasupde').val(colpwddesupd);
 

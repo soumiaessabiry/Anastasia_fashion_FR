@@ -38,7 +38,9 @@
                     <span class="icon"><img src="https://img.icons8.com/fluency/68/undefined/user-group-woman-woman.png"/></span>
                     <div class="card-body">
                     <h5 class="card-title fw-bold bg-bleu"> Mes Product </h5>
-                    <p class="card-text fw-bold fs-3">Totale Product </p>
+                    <p class="card-text fw-bold fs-3">
+                     
+                    </p>
                     </div>
                 </div>
             </div>

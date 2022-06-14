@@ -3,9 +3,7 @@
 
 $Controller = new AdministrateurController();
     // admin
-   $Controller->addadmin();
    $Controller->updateadmin();
-   $Controller->deleteadmin();
 // designer
 
    $Controller->adddesigner();
@@ -14,5 +12,5 @@ $Controller = new AdministrateurController();
 // client
    $Controller->addClient();
   
-
+   $Controller->loginUsers()
  ?>

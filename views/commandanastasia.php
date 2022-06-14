@@ -36,9 +36,7 @@
 </head>
 <body>
 <div class="wrapper">
-
-    <div class="">
-        <div class="" >
+<div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
             <div class="  mx-3 mt-3 table-wrapper" style="height:100vh">
                     <div class="table-title">
                         <div class="">
@@ -50,7 +48,7 @@
                         </div>
                     </div>
                     <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTable">
+                    <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
                         <thead>
                             <tr style=" background-color: #a8089380;">
                                 <th  hidden >idproduct</th>

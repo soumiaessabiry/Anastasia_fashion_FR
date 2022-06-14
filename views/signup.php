@@ -33,9 +33,13 @@
             <img src="https://img.icons8.com/color/40/undefined/circled-user-male-skin-type-7--v1.png"/>		
 			<input type="text" name="prenomclient" id="prenomclient" placeholder="Prenom">
 			</div>
+			
 			<div class="form-field d-flex align-items-center">
-				
-				<input type="file" name="imgprofilclient" id="imgprofilclient" placeholder="imgprofil">
+			    <label for="exampleFormControlInput1" class="form-label p-3 fs-4" >Role</label>
+				<select name="role_cliente" id="role_client" style=" width:224px;height:52px;border: none; border-radius:40px;">
+					<option value="Client">Client</option>
+				</select>
+                
 			</div>
 			<div class="form-field d-flex align-items-center">
 				
@@ -52,7 +56,7 @@
 				<img src="https://img.icons8.com/ios-filled/40/undefined/good-pincode.png"/>			
 				<input type="password" name="confpasswordclient" id="confpwdclient" placeholder="Confirm Password">
 			</div>
-		<input type="submit" name="signupclient" class="btn mt-3" value="Inscription">
+			<button type="submit" name="signupclient" class="btn mt-3" >Inscription</button>
 		</form>
 		<div class="text-center fs-6">
         <a class="  fs-5" href="login">login</a>

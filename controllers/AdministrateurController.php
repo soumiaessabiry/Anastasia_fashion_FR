@@ -2,17 +2,19 @@
 <?php
 class AdministrateurController  {
 
-	public function addadmin(){
+	// public function addadmin(){
 
-		if (isset($_POST['Addadmin'])){ 
-			$admines=new Administrateur();
-			$Nom_completadm=$_POST['nomadmin'];
-			$emailadm=$_POST['emailadmin'];
-			$passwordadmin=$_POST['passwordadmin'];
-			if($admines->creatAdmine($Nom_completadm, $emailadm, $passwordadmin)) header('location:Admin');
+	// 	if (isset($_POST['Addadmin'])){ 
+	// 		$admines=new Administrateur();
+	// 		$nom_admin=$_POST['nomadmin'];
+	// 		$prenom_admin=$_POST['prenomadmin'];
+	// 		$Role=$_POST['role_adm'];
+	// 		$emailadm=$_POST['emailadmin'];
+	// 		$passwordadmin=$_POST['passwordadmin'];
+	// 		if($admines->creatAdmine($nom_admin,$prenom_admin,$Role,$emailadm,$passwordadmin)) header('location:Admin');
 
-		}
-	}
+	// 	}
+	// }
 	
 	public function getAlladmin(){
 
@@ -24,22 +26,17 @@ class AdministrateurController  {
 	public function updateadmin(){
 		if(isset($_POST['updateAdmin'])){
 
-			$admine = new Administrateur(); 
+			$admine = new Administrateur();
+			$nom_admin=$_POST['updnamAdmie'];
+			$prenom_admin=$_POST['updprenAdmin']; 
+			$role_admin=$_POST['roleupd']; 
 			$updatAdmin=$_POST["idadmine"];
-			$NomCompAdmin=$_POST["updnamAdmie"];
 			$emailAdmn=$_POST["updemailadme"];
 			$passwordadmn=$_POST["UpdpasswordAdmine"];
-			
-			if($admine->updatAdmin($NomCompAdmin,$emailAdmn,$passwordadmn,$updatAdmin))header('location:Admin');
+			if($admine->updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn))header('location:Admin');
 			}
 	}
 
-	public function deleteadmin(){
-		if(isset($_POST['deletid'])){
-			$admine = new Administrateur(); 
-			if($admine->deletadmin($_POST['idadmine'])) header('location:Admin');
-			} 
-		}
 // *******************************************************designer********************************/
 				public function adddesigner(){
 
@@ -47,12 +44,11 @@ class AdministrateurController  {
 						$designer=new Designer();
 						$Nom_Designer=$_POST['nomdesfas'];
 						$Prenom_Designer=$_POST['prenomdesfas'];
-						$Cin_Designer=$_POST['cindesfas'];
-						$imge_Designer=$_POST['profdesfas'];
+						$Role=$_POST['role'];
 						$Email_Designer=$_POST['emaildesfas'];
 						$password_Designer=$_POST['passworddesfas'];
 					
-						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Cin_Designer ,$imge_Designer,$Email_Designer,$password_Designer)) header('location:fashiondesigner');
+						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$password_Designer)) header('location:fashiondesigner');
 			
 					}
 				}
@@ -70,12 +66,11 @@ class AdministrateurController  {
 						$designer=new Designer();
 						$id_designerupd=$_POST['iddesignere'];
 						$Nom_Designerupd=$_POST['nomdesfasupd'];
-						$Prenom_Designerup=$_POST['prenomdesfasupd'];
-						$Cin_Designerupd=$_POST['cindesfasupd'];
-						$imge_Designerupd=$_POST['profdesfasupd'];
+						$Prenom_Designerup=$_POST['prenomdesfasupd'];		
+						$Role_desig=$_POST['roleupd'];		
 						$Email_Designerupd=$_POST['emaildesfasupd'];
 						$password_Designerupd=$_POST['passworddesfasupd'];
-						if($designer->updatdesigner($imge_Designerupd,$Nom_Designerupd,$Prenom_Designerup,$Cin_Designerupd,$Email_Designerupd,$password_Designerupd,$id_designerupd)) header('location:fashiondesigner');
+						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$password_Designerupd,$id_designerupd)) header('location:fashiondesigner');
 						}
 				}
 			
@@ -87,20 +82,18 @@ class AdministrateurController  {
 					}
 
 
-      // ********************************Client*************************************************** 
-
+      // ********************************Client*************************************************** 	
 		public function addClient(){
-
 		if (isset($_POST['signupclient'])){ 
 			$client=new Client();
-			$imgprofilclient=$_POST['imgprofilclient'];
 			$nomclient=$_POST['nomclient'];
 			$prenomclient=$_POST['prenomclient'];
+			$Role_client=$_POST['role_cliente'];
 			$emailclient=$_POST['emailclient'];
 			$pwdclient=$_POST['passwordclient'];
 			$confpwdclient=$_POST['confpasswordclient'];
 			if ($pwdclient ===$confpwdclient) {
-				if($client->creatclinet($imgprofilclient,$nomclient,$prenomclient,$emailclient,$pwdclient,$confpwdclient)) header('location:login');
+				if($client->creatclinet($nomclient,$prenomclient,$Role_client,$emailclient,$pwdclient,$confpwdclient)) header('location:login');
 			}else echo 'eroooooor !!!!';
 
 		}
@@ -112,5 +105,26 @@ class AdministrateurController  {
 		return $client->afficheclient();  
 
 }
+//********************************************login****************************************** */
+public function loginUsers(){
+
+	if (isset($_POST['loginuser'])){ 
+		$logine = new login();
+		$emaillogin = $_POST['emailuser'];
+		$passwordlogin = $_POST['passworduser'];
+		$res = $logine->login($emaillogin,$passwordlogin);
+		if($res['role_user'] == 'Admin') {
+				header('location:Dashboardadmin');
+		}elseif($res['role_user'] == 'dashborddesigner') {
+				header('location:Dashboardadmin');
+		}else{
+			header('location:DashboardClien');
+
+		}
+	}
+}
+
+
+
 }
 ?>

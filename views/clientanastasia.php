@@ -70,12 +70,12 @@
                             foreach($clientes as $client){
                              ?>
                                         <tr>
-                                            <td><?= $client['id_client'] ?></td>
-                                            <td  style="width:50px;"><?= $client['profil_client'] ?></td>
-                                            <td><?= $client['prenom_client'] ?></td>
-                                            <td><?= $client['nom_client'] ?></td>
-                                            <td><?= $client['email_client'] ?></td>
-                                            <td><?= $client['password_client'] ?></td>
+                                            <td><?= $client['id_user'] ?></td>
+                                            <td ><?= $client['nom_user'] ?></td>
+                                            <td><?= $client['prenom_user'] ?></td>
+                                            <td><?= $client['role_user'] ?></td>
+                                            <td><?= $client['email_user'] ?></td>
+                                            <td><?= $client['password_user'] ?></td>
                                         </tr>
                                     </tr>
                                     <?php } ?>  

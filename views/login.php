@@ -15,17 +15,17 @@
 
     <div class="wrapper ">
 		<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Login<img src="https://img.icons8.com/color-glass/48/undefined/user-rights.png"/></p>
-		<form class="p-3 mt-2">
+		<form class="p-3 mt-2 " method="POST" action="operation">
 		
 			<div class="form-field d-flex align-items-center">
                 <img src="https://img.icons8.com/color/30/undefined/email-sign.png"/>
-                 <input type="email" name="emailclient" id="emailclient" placeholder="Email">
+                 <input type="email" name="emailuser" id="emailuser" placeholder="Email">
 			</div>
 			<div class="form-field d-flex align-items-center">
                 <img src="https://img.icons8.com/cute-clipart/30/undefined/privacy.png"/>				
-                <input type="password" name="passwordclient" id="pwdclient" placeholder="Password">
+                <input type="password" name="passworduser" id="pwduser" placeholder="Password">
 			</div>
-		<input type="submit" name="loginclient" class="btn mt-3 fs-4" value="login">
+		<input type="submit" name="loginuser" class="btn mt-3 fs-4" value="login">
 		</form>
 		<div class="text-center fs-6">
         <a class="  fs-5" href="signup">Inscription</a>

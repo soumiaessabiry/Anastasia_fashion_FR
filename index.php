@@ -6,7 +6,7 @@ if(basename($_SERVER['REQUEST_URI'])==="home" || basename($_SERVER['REQUEST_URI'
   require_once('views/includes/script.php') ;
 
 }
-if(basename($_SERVER['REQUEST_URI'])==="operation" ){
+if(basename($_SERVER['REQUEST_URI'])==="operation" || basename($_SERVER['REQUEST_URI'])==="Dashboardadmin"){
 require_once('../Anastasia_fashion_FR/models/modeladmin.php');
 require_once('../Anastasia_fashion_FR/models/modeldesigner.php');
 require_once('../Anastasia_fashion_FR/models/modelclient.php');
@@ -14,15 +14,14 @@ require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php')
 
 }
 if(basename($_SERVER['REQUEST_URI'])==="fashiondesigner" ){
-// require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
 require_once('../Anastasia_fashion_FR/models/modeldesigner.php');
 }
-if(basename($_SERVER['REQUEST_URI'])==="signup" ){
+
+if(basename($_SERVER['REQUEST_URI']) ==="signup" ){
 require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
 require_once('../Anastasia_fashion_FR/models/modelclient.php');
-
-
 }
+
 if(basename($_SERVER['REQUEST_URI'])==="clientanastasia" ){
 require_once('../Anastasia_fashion_FR/controllers/AdministrateurController.php');
 require_once('../Anastasia_fashion_FR/models/modelclient.php');
@@ -57,6 +56,7 @@ $pages=
 if(isset($_GET['page'])){
   if(in_array($_GET['page'],$pages)){
       $home->index($_GET['page']);
+      
   } else{
     include('views/includes/404.php');
   }

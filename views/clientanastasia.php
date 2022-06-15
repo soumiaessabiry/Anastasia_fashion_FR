@@ -54,12 +54,10 @@
                     <table class="table table-striped table align-middle" id="myTableclient">
                         <thead>
                             <tr style=" background:#a80893c3;">
-                                <th >id</th>
-                                <th >Profil</th>
                                 <th>Prenon</th>
                                 <th>Nom</th>
                                 <th>Email</th>
-                                <th>password</th>
+                              
                             </tr>
                         </thead>
                         <tbody class="fw-bold">
@@ -70,18 +68,13 @@
                             foreach($clientes as $client){
                              ?>
                                         <tr>
-                                            <td><?= $client['id_user'] ?></td>
                                             <td ><?= $client['nom_user'] ?></td>
                                             <td><?= $client['prenom_user'] ?></td>
-                                            <td><?= $client['role_user'] ?></td>
                                             <td><?= $client['email_user'] ?></td>
-                                            <td><?= $client['password_user'] ?></td>
                                         </tr>
                                     </tr>
                                     <?php } ?>  
-                                    <tr id="spacing-row">
-                                    <td></td>
-                                    </tr>
+                                    
                                     
                         </tbody>
                     </table>

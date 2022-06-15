@@ -23,95 +23,29 @@
 <div class="container bg-white ">
 
     <div class="row " style="background: #ab64a26a;">
+    <?php 
+        $products=new AdministrateurController();
+        $product=$products->getAllproduit();
+        foreach(array_slice($product, 0, 20)  as $products){
+                            
+     ?>
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod3.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    showproducti class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-            
-            <div class="title fw-bold pt-4 pb-1">Winter Sweater</div>
-            <div class="price">$ 60.0</div>
-        </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod11.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-           
-            <div class="title fw-bold pt-4 pb-1">Denim Dresses</div>
-            <div class="price">$ 55.0</div>
-        </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod2.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-          
-            <div class="title fw-bold pt-4 pb-1"> Empire Waist Dresses</div>
-            <div class="price">$ 70.0</div>
-        </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3 " >
-            <div class="product"> <img src="././public/image/prod1.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-            <div class="title fw-bold pt-4 pb-1">Pinafore Dresses</div>
-            <div class="price">$ 60.0</div>
-        </div>
-    </div>
-    <div class="row mt-4"  style="background: #ab64a26a;">
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod4.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-           
-            <div class="title fw-bold pt-4 pb-1">Winter Sweater</div>
-            <div class="price">$ 60.0</div>
-        </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod5.jpg" alt="">
+            <div class="product"> <img src="./public/image/<?= $products['image_produit'] ?>" alt="">
+
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
                     <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
                 </ul>
             </div>
             
-            <div class="title fw-bold pt-4 pb-1">Denim Dresses</div>
-            <div class="price">$ 55.0</div>
+            <div class="title fw-bold pt-4 pb-1"><?= $products['discription_produit'] ?></div>
+            <div class="title fw-bold pt-4 pb-1"><?= $products['nom_produit'] ?></div>
+            <div class="price"><?= $products['prix_produit'] ?></div>
         </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod6.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-            <div class="title fw-bold pt-4 pb-1"> Empire Waist Dresses</div>
-            <div class="price">$ 70.0</div>
-        </div>
-        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="././public/image/prod7.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
-            </div>
-            <div class="tag bg-green">new</div>
-            <div class="title fw-bold pt-4 pb-1">Pinafore Dresses</div>
-            <div class="price">$ 60.0</div>
-        </div>
+        <?php } ?>  
+       
     </div>
+   
 </div>
  </main>
 

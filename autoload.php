@@ -1,4 +1,5 @@
 <?php
+// session_start();
 require_once("./bootsrap.php");
 spl_autoload_register('autoload');
 

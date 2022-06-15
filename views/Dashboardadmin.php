@@ -72,10 +72,9 @@
                     <h5 class="card-title fw-bold ">Cliens Anastasia</h5>
                         <p class="card-text fw-bold fs-3">Totale Client Anastasia</p>
                         <H1> 
-                            <?php 
+                            <?php  
                             $client = new AdministrateurController();
                             echo count($client->getAllClient());
-                         
                             ?>
                     </H1>
                     </div>

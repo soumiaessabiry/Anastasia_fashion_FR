@@ -115,16 +115,59 @@ public function loginUsers(){
 		$res = $logine->login($emaillogin,$passwordlogin);
 		if($res['role_user'] == 'Admin') {
 				header('location:Dashboardadmin');
-		}elseif($res['role_user'] == 'dashborddesigner') {
-				header('location:Dashboardadmin');
+		}elseif($res['role_user'] =='Designer') {
+				header('location:dashborddesigner');
 		}else{
-			header('location:DashboardClien');
-
+			header('location:DashboardClient');
 		}
+		$_SESSION["id_users"] =$res['id_user'];
+		$_SESSION["prenom_user"] = $res['prenom_user'];
+		$_SESSION["nom_user"] = $res['nom_user'];
+		$_SESSION["email_user"] = $res['email_user'];
+	}
+}
+//*******************************************product***************************************************** */
+public function addProduit(){
+	if (isset($_POST['addoroduct'])){ 
+		$products = new Product();
+		// $id_designer=$_SESSION["nom_user"];
+		$nom_product = $_POST['prodajouter'];
+		$description_product = $_POST['discrip'];
+		$prix_product = $_POST['prixproduit'];
+		$img_product = $_POST['imgproduit'];
+		$qutiter_product = $_POST['quantproduit'];
+
+		if($products->ajouterproduit($nom_product,$description_product,$prix_product ,$img_product,$qutiter_product,$_SESSION["id_users"]))
+		 header('location:produiddesigner');
+
 	}
 }
 
+public function getAllproduit(){
+	$products=new Product();
+	return $products->afficheProduct($_SESSION["id_users"]);  
 
+}
+
+public function updatedeproduit(){
+	if(isset($_POST['updateproduct'])){
+		$products= new Product(); 
+		$id_product = $_POST['updproduite'];
+		$nom_productupd = $_POST['nomproduitupde'];
+		$description_productupd = $_POST['discrupdprod'];
+		$img_productupd = $_POST['imgprodupd'];
+		$prix_productupd = $_POST['prixprodupd'];
+		$qutiter_productupd = $_POST['quantprodupd'];
+		if($products->updateproduct($id_product,$nom_productupd,$img_productupd,$description_productupd ,$prix_productupd,$qutiter_productupd,$_SESSION["id_users"])) header('location:produiddesigner');
+		}
+}
+
+public function deletProduit(){
+	if(isset($_POST['deletProduit'])){
+		$products= new Product(); 
+		if($products->deletproduit($_POST['updproduite'])) header('location:produiddesigner');
+		} 
+	}
 
 }
 ?>

@@ -10,6 +10,7 @@
 		})
 	</script>
 <div class="top_navbar">
+
     <div class="hamburger">
        <div class="hamburger__inner">
          <div class="one"></div>
@@ -22,7 +23,7 @@
       <a class="navbar-brand" href="#!"><img src="././public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></a>
 
       </div>
-      
+     
     </div>
   </div>
     
@@ -35,44 +36,26 @@
               </div>
               <div class="profile_info">
                  <p>Welcome</p>
-                 <p class="profile_name">nom designer fashion</p>
+                 <p class="profile_name"></p>
               </div>
             </div>
             <ul>
               <li>
-                <a href="dashborddesigner">
-                  <span class="icon"><img src="https://img.icons8.com/nolan/45/home-page.png"/></span>
-                  <span class="title">Mon Dashbord </span>
-                </a>
-              </li>
-              <li>
-                <a href="home">
-                  <span class="icon"><img src="https://img.icons8.com/nolan/45/home-page.png"/></span>
-                  <span class="title"> Home </span>
-                </a>
-              </li>
-              <li>
-                <a href="profilfashiondes">
-                  <span class="icon"><img src="https://img.icons8.com/external-mixed-line-solid-yogi-aprelliyanto/45/undefined/external-profile-file-and-folder-mixed-line-solid-yogi-aprelliyanto.png"/></span>
-                  <span class="title"> Profil </span>
-                </a>
-              </li>
-              <li>
-                <a href="produiddesigner">
+                <a href="profilClient">
                   <span class="icon"><img src="https://img.icons8.com/external-creatype-filed-outline-colourcreatype/45/undefined/external-fashion-outfit-filed-outline-creatype-filed-outline-colourcreatype-25.png"/></span>
-                  <span class="title"> Mes Product </span>
+                  <span class="title"> Mon profil </span>
                 </a>
               </li>
               <li>
-                <a href="commanddesigner">
+                <a href="moncommand">
                   <span class="icon"><img src="https://img.icons8.com/nolan/45/shopping-1.png"/></span>
-                  <span class="title">Mes Command</span>
+                  <span class="title">Mon Command</span>
                 </a>
               </li>
               <li>
-                 <a href="clientdesigner">
+                 <a href="#">
                   <span class="icon"><img src="https://img.icons8.com/fluency/45/undefined/user-group-woman-woman.png"/></span>
-                  <span class="title">Mes client</span>
+                  <span class="title">logout</span>
                 </a>
               </li>
             </ul>

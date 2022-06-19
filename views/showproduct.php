@@ -19,34 +19,53 @@
             <!-- DEMO HTML -->
    
             <div class="container bg-white ">
+            <?php 
+                    $products=new AdministrateurController();
+                    $product=$products->creatpanier($_SESSION['id_produit']);
 
-                <div class=" row d-flex justify-content-center container mt-5">
+                    foreach($product  as $products){
+               
+                        
+                                    
+                ?> 
+                <div class="row d-flex justify-content-center container mt-5">
                     <figure class="col-lg-8 col-sm-12  snip1527" style="width: 100%;">
-                    <div class="image"><img src="././public/image/prod6.jpg" alt="pr-sample23" />
+                    <div class="image"><img src="./public/image/<?= $products['image_produit'] ?>" alt="pr-sample23" />
                     </div>
                         <figcaption>
-                            <h3>Dreess Anastasia</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <button class="btn btn-lg p-3 fs-3" style="background: #410839; color:azure" >230dh</button>
+                            <h3  style="color:#fff"><?php echo $products['nom_produit']; ?></h3><br>
+                            <button class="btn btn-lg p-3 fs-3" style="background: #410000; color:azure" ><?php echo $products['prix_produit']; ?>DH</button>
                         </figcaption>
                         <a href="#"></a>
                     </figure>
+
                     <figure class="col-lg-8 col-sm-12   ">
                         <figcaption>
                             <div class="card text-center" style=" margin: 16px auto;" >
-                                <div class="card-header fw-bold " style="background: #ab64a26a;"> Commande</div>
+                                <div class="card-header fw-bold " style="background: #ab64a26a;">Commande</div>
                                 <div class="card-body">
+
+                                    <h5 class="card-title">
+                                    <h4><span  "> Taille disponible :<span class="fw-bold fs-5" style="color:blueviolet"> <?= $products['Taille'] ?></span></span></h4>
+                                    </h5>
                                     <h5 class="card-title">Quantiter</h5>
                                     <p class="card-text">
+                                    <form action="operation" method="Post">
+                                    <input type="hidden" name="taille" value="<?= $products['Taille'] ?>">
+                                    <input type="hidden" name="nom_produit" value="<?php echo $products['nom_produit']; ?>">
+                                   <input type="hidden" name="prix_produit" value="<?php echo $products['prix_produit']; ?>">
+                                    <input type="hidden" name="id_produit" value="<?php echo $products['id_produit']; ?>">
                                     <input type="number" name="qutiterproduit" id="qutiterproduit" value="1" >
+                                    <input class="fw-bold btn btn-outline-success" type="submit" name=" Achter"  value="valider " >
                                     </p>
-                                    <a href="panier" class="btn p-3 fs-3" style="background: #410839; color:azure">  Ajouter au panier</a>
+                                    </form>
                                 </div>
                                 
                             </div>
                         </figcaption>
                     </figure>
                 </div>
+                <?php } ?>  
             </div>  
         </main>
     </body>

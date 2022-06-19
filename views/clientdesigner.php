@@ -36,54 +36,58 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="container-fluid mt-2">
 
-    <div class="">
-        <div class="" >
-            <div class="  mx-3 mt-3 table-wrapper" style="height:100vh">
+    <div class="d-flex justify-content-center row">
+        <div class=" container col-sm-11">
+                <div class=" bg-white rounded">
                     <div class="table-title">
-                        <div class="">
-                            <div class="col">
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#8b106273; margin-left: 67px; margin-top: 75px;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes client <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
-                            <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
+                        <div class="row">
+                            <div class="col-md-6 text-center mt-3">
+                            <button type="button" class="btn btn-outline btn-lg fw-bold " style="background-color:#8b106273; " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes client <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
                             </div>
-                        
                         </div>
-                    </div>
-                    <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTableclient">
-                        <thead>
-                            <tr style=" background:#8b106273;">
-                                <th ></th>
-                                <th hidden>non</th>
-                                <th>Prenon</th>
-                                <th>Nom</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody class="fw-bold">
-                                    <tr class="bg-client">
-                                        <td ><img src="https://img.icons8.com/ios-filled/40/undefined/user-female-circle.png"/></td>
-                                        <td hidden >1</td>
-                                        <td class="text-nowrap">prenon client</td>
-                                        <td class="text-nowrap">Nomclient </td>
-                                        <td class="text-nowrap">client@gmail.com</td>
-                                       
-                                    </tr>
-                                    <tr id="spacing-row">
-                                    <td></td>
-                                    </tr>
-                                    
-                        </tbody>
-                    </table>
-                    </div>
-            </div>
-
+                        <div class="mt-3">
+                            <div class="table-responsive">
+                                <table class="table table-striped ">
+                                    <thead>
+                                        <tr style=" background:#8b106273;">
+                                            <th ></th>
+                                            <th hidden>non</th>
+                                            <th>Prenon</th>
+                                            <th>Nom</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="fw-bold">
+                                        <tr class="bg-client">
+                                            <td ><img src="https://img.icons8.com/ios-filled/40/undefined/user-female-circle.png"/></td>
+                                            <td hidden >1</td>
+                                            <td class="text-nowrap">prenon client</td>
+                                            <td class="text-nowrap">Nomclient </td>
+                                            <td class="text-nowrap">client@gmail.com</td>
+                                            
+                                        </tr>
+                                        <tr id="spacing-row">
+                                        <td></td>
+                                        </tr>
+                                                
+                                    </tbody>
+                               
+                                </table>
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>          
         </div>
-
+                     
     </div>
+</div>    
 
-</div>
+
+
+  
+
   
 	
 

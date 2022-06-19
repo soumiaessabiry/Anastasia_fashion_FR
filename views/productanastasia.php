@@ -10,8 +10,8 @@
     a{
         text-decoration: none !important;
     }
-    .card:hover{
-        background: #410839 !important;
+    .bg-product:hover{
+        background: #ab64a26a !important;
         color: white !important;
         font-weight: bold !important;
         pointer-events: painted !important;
@@ -29,77 +29,66 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
-    <title>productanastasia</title>
+    <title>product anasatasia</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
     <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
 
-<div class="wrapper">
+    <div class="container-fluid mt-2">
 
-             
-
-        <div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
-            <div class="  mt-3 table-wrapper" style="height:100vh">
-                    <div class="table-title">
-                        <div class="">
-                            <div class="col">
-                                
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Product Anastasia<img src="https://img.icons8.com/doodle/64/undefined/used-product.png"/> </button>
-                            <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
+        <div class="d-flex justify-content-center row">
+            <div class=" container col-sm-11">
+                    <div class=" bg-white rounded">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col">
+                                <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#ab64a26a;" data-bs-toggle="modal" data-bs-target="#exampleModal">Product Anastasia<img src="https://img.icons8.com/doodle/64/undefined/used-product.png"/> </button>
+                                </div>
                             </div>
+                            <div class="mt-3">
+                                <div class="table-responsive">
+                                    <table class="table  ">
                         
+                                        <thead>
+                                        <tr style=" background-color: #ab64a26a;">
+                                            <th >id</th>
+                                            <th>nom_produit</th>
+                                            <th>image_produit</th>
+                                            <th>discription</th>
+                                            <th>Taille disponible</th>
+                                            <th>prix_produit</th>
+                                            <th>quantiter_produit</th>
+                                            <th>designer  ajouté  : </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="fw-bold">
+                                        <?php 
+                                            $products=new AdministrateurController();
+                                            $product=$products-> getAllproduit();
+                                            foreach($product as $products){
+                                        ?>
+                                        <tr class="bg-product">
+                                        <td><?= $products['id_produit'] ?></td>
+                                        <td><?= $products['nom_produit'] ?></td>
+                                        <td><?= $products['image_produit'] ?></td>
+                                        <td><?= $products['discription_produit'] ?></td>
+                                        <td><?= $products['Taille'] ?></td>
+                                        <td><?= $products['prix_produit'] ?></td>
+                                        <td><?= $products['quantiter_produit'] ?></td>
+                                        <td><?= $products['id_user_product'] ?></td>
+                                            </tr>
+                                                    
+                                            <?php } ?>        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
-                        <thead>
-                            <tr style=" background-color: #ab64a26a;">
-                                <th >id</th>
-                                <th>produit</th>
-                                <th>discription</th>
-                                <th>prix</th>
-                                <th>Quantiter</th>
-                                <th>produit ajouté par : </th>
-                            </tr>
-                        </thead>
-                        <tbody class="fw-bold">
-                            <tr class="bg-product">
-                                <td >1</td>
-                                <td class="text-nowrap">produit A </td>
-                                <td class="text-nowrap">discription</td>
-                                <td class="text-nowrap">300dh</td>
-                                <td class="text-nowrap">30</td>
-                                <td class="text-nowrap">creaTeur X</td>
-                            </tr>
-                            <tr id="spacing-row">
-                            <td></td>
-                            </tr>
-                       
-                            <tr class="bg-product">
-                                <td >1</td>
-                                <td class="text-nowrap">produit A </td>
-                                <td class="text-nowrap">discription</td>
-                                <td class="text-nowrap">300dh</td>
-                                <td class="text-nowrap">30</td>
-                                <td class="text-nowrap">creaTeur X</td>
-                            </tr>
-                            <tr id="spacing-row">
-                            <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div>
             </div>
-
-        </div>
-
+        </div>	
     </div>
-
-</div>
-  
-	
-
 </body>
 </html>

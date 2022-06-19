@@ -36,19 +36,19 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="container-fluid mt-2">
 
-    <div class="">
-        <div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
-                    <div class="table-title">
-                        <div class="">
-                            <div class="col">
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal" > Ajouter un Produit <img src="https://img.icons8.com/doodle/64/undefined/used-product.png"/> </button>
-                            <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
-                            </div>
+<div class="d-flex justify-content-center row">
+    <div class=" container col-sm-11">
+            <div class=" bg-white rounded">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col">
+                        <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4;" data-bs-toggle="modal" data-bs-target="#exampleModal" > Ajouter un Produit <img src="https://img.icons8.com/doodle/34/undefined/used-product.png"/> </button>
                         </div>
                     </div>
-                    <div class="table-responsive " style=" margin-left: 94px;">
+                    <div class="mt-3">
+                        <div class="table-responsive">
                     <table class="table table-striped table align-middle" id="myTable">
                         <thead>
                             <tr style=" background-color: #b72da4a4;">
@@ -56,6 +56,7 @@
                                 <th>produit</th>
                                 <th >image</th>
                                 <th>discription</th>
+                                <th>la taille</th>
                                 <th>prix</th>
                                 <th>Quantiter</th>
                                 <th>id_designer</th>
@@ -66,13 +67,14 @@
                             <tr class="bg-product">
                             <?php 
                                 $products=new AdministrateurController();
-                                $product=$products->getAllproduit();
+                                $product=$products->getaproduct();
                                 foreach($product as $products){
                              ?>
                                 <td><?= $products['id_produit'] ?></td>
                                 <td><?= $products['nom_produit'] ?></td>
                                 <td><?= $products['image_produit'] ?></td>
                                 <td><?= $products['discription_produit'] ?></td>
+                                <td><?= $products['Taille'] ?></td>
                                 <td><?= $products['prix_produit'] ?></td>
                                 <td><?= $products['quantiter_produit'] ?></td>
                                 <td><?= $products['id_user_product'] ?></td>
@@ -118,7 +120,17 @@
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">discription</label>
                         <textarea   rows="10" type="text" class="form-control" id="discriptionproduit" name="discrip" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" ></textarea>
-                    </div>
+                </div>
+                <div class="mb-3 fw-bold">
+                <label for="cars">Ajouter la taille:</label>
+                    <select name="taille_produ" id="taille_prod">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    </select>
+                </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">prix</label>
                         <input type="text" class="form-control" id="prixproduit" name="prixproduit" placeholder="Enter le prix" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
@@ -165,6 +177,16 @@
                         <label for="exampleFormControlInput1" class="form-label">discription</label>
                         <textarea   rows="10" type="text" class="form-control" id="discrupdprode" name="discrupdprod" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" ></textarea>
                     </div>
+                    <div class="mb-3 fw-bold">
+                <label for="cars">Ajouter la taille:</label>
+                    <select name="taille_produp" id="taille_produpd">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XxL">XXL</option>
+                    </select>
+                </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">prix</label>
                         <input type="text" class="form-control" id="prixprodupde" name="prixprodupd" placeholder="Enter le prix" style="margin-bottom: 32px;"  data-parsley-trigger="change" required>
@@ -200,12 +222,14 @@
             colnomprodupd=colupddeproduct.find("td:eq(1)").text(); 
             colimgprodupd=colupddeproduct.find("td:eq(2)").text(); 
             coldiscripupd=colupddeproduct.find("td:eq(3)").text(); 
-            colprixprodpd=colupddeproduct.find("td:eq(4)").text(); 
-            colquitprodupd=colupddeproduct.find("td:eq(5)").text(); 
+            coltialleupdprd=colupddeproduct.find("td:eq(4)").text(); 
+            colprixprodpd=colupddeproduct.find("td:eq(5)").text(); 
+            colquitprodupd=colupddeproduct.find("td:eq(6)").text(); 
             $('#id_produit').val(colidproduct);
             $('#nomproduitupd').val(colnomprodupd);
             $('#imgprodupde').val(colimgprodupd);
             $('#discrupdprode').val(coldiscripupd);
+            $('#taille_produpd').val(coltialleupdprd);
             $('#prixprodupde').val(colprixprodpd);
             $('#quantprodupde').val(colquitprodupd);
 

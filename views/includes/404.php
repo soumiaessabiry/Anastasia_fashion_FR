@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1 style="text-align:center">Errore404</h1>
+<h1 style="text-align:center"><img src="./public/image/404.jpg" alt="" srcset=""></h1>
     
 </body>
 </html>

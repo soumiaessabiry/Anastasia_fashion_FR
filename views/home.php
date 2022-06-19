@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,13 +56,20 @@
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder"><?= $products['nom_produit'] ?></h5>
-                                    <span><?= $products['prix_produit'] ?></span>
+                                    <span class="fw-bolder"><span style="color:darkmagenta">Prix :</span><?= $products['prix_produit'] ?>DH</span>
+                                    <h4><span> Taille disponible : <?= $products['Taille'] ?></span></span></h4>
                                 </div>
                             </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btnadd btn-outline-dark mt-auto" href="showproduct">Add to cart</a></div>
-                            </div>
+                            <form action="showproduct" method="POST" style="margin-bottom: 0px;">
+                    
+                                <input type="hidden" name="prix_produit" value="<?php echo $products['nom_produit']; ?>">
+                                <input type="hidden" name="nom_produit" value="<?php echo $products['prix_produit']; ?>">
+                                <input type="hidden" name="id_produit" value="<?php echo $products['id_produit']; ?>">
+                                <button type="submit" name="achter" class="btn btnadd btn-outline-dark mt-2 text-center w-100 mb-0 p-3" >Achter</button>
+                            </form>
+                            
+  
+
                         </div>
                     </div>
                    
@@ -69,7 +77,6 @@
                 </div>   
         </section>
         <div class="text-center text-white">
-        <!-- <button class=" btn glow-on-hover example  fw-bold p-3 px-4  " style="color: #FFF; " ><a href=""></a> </button></a> -->
         <a href="allproduct"> <button class=" btn glow-on-hover SAPRO example butsigup fw-bold p-3 px-4 mb-4 " style="color: #FFF;  " > <img src="https://img.icons8.com/glyph-neue/40/undefined/dress-front-view.png"/>SEE All PRODUCTS</button></a>
 
         </div>

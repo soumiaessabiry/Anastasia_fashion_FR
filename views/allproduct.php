@@ -32,15 +32,18 @@
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
             <div class="product"> <img src="./public/image/<?= $products['image_produit'] ?>" alt="">
 
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <a href="showproduct"><li class="icon"><span class="fas fa-shopping-bag"></span></li></a>
-                </ul>
             </div>
-            
-            <div class="title fw-bold pt-4 pb-1"><?= $products['discription_produit'] ?></div>
-            <div class="title fw-bold pt-4 pb-1"><?= $products['nom_produit'] ?></div>
-            <div class="price"><?= $products['prix_produit'] ?></div>
+            <div class="title fw-bold pt-4 pb-1"  style="color:blue"><?= $products['nom_produit'] ?></div>
+            <div class="title fw-normal pt-4 pb-1"><?= $products['discription_produit'] ?></div>
+            <div class="title fw-bold pt-4 pb-1"><span style="color:blue">Taille disponible :</span> <span class="fs-5" style="color:darkmagenta"><?= $products['Taille'] ?></span></div>
+            <div class="price fw-bold"  style="color:RED"><?= $products['prix_produit'] ?> DH</div>
+            <form action="showproduct" method="POST" style="margin-bottom: 0px;">
+                    <input type="hidden" name="taille" value="<?php echo $products['nom_produit']; ?>">
+                    <input type="hidden" name="prix_produit" value="<?php echo $products['nom_produit']; ?>">
+                    <input type="hidden" name="nom_produit" value="<?php echo $products['prix_produit']; ?> ">
+                    <input type="hidden" name="id_produit" value="<?php echo $products['id_produit']; ?>">
+                    <button type="submit" name="achter" class="btn btnadd btn-outline-success mt-2 text-center w-100 mb-0 p-3" >Achter</button>
+            </form>
         </div>
         <?php } ?>  
        

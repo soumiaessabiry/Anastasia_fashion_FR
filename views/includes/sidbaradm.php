@@ -1,5 +1,6 @@
 
 <div class="top_navbar">
+
     <div class="hamburger">
        <div class="hamburger__inner">
          <div class="one"></div>
@@ -12,13 +13,7 @@
       <a class="navbar-brand" href="#!"><img src="././public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></a>
 
       </div>
-            <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> <img  class="fas " src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-7--v1.png"></a>             
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="profilAdmin">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
-            </div>
+           
       </div>
     </div>
 
@@ -32,7 +27,7 @@
               </div>
               <div class="profile_info">
                  <p>Welcome</p>
-                 <p class="profile_name">non Admin</p>
+                 <p class="profile_name"></p>
               </div>
             </div>
             <ul>

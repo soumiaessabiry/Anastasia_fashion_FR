@@ -17,5 +17,11 @@ $Controller = new AdministrateurController();
    $Controller->addProduit();
    $Controller->updatedeproduit();
    $Controller->deletProduit();
+//   command
+   $Controller->addcommand();
+   $Controller->delecommand();
+   // users
+   $Controller->getAllUser();
+   
 
  ?>

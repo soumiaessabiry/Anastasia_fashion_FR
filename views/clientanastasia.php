@@ -36,58 +36,52 @@
 </head>
 <body>
 
-<div class="wrapper">
+    <div class="container-fluid mt-2">
 
-    <div class="">
-        <div class="" >
-            <div class="  mx-3 mt-3 table-wrapper" style="height:100vh">
-                    <div class="table-title">
-                        <div class="">
-                            <div class="col">
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#a80893c3; margin-left: 67px; margin-top: 75px;  " data-bs-toggle="modal" data-bs-target="#exampleModal">client Anastasia<img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
-                            <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
+        <div class="d-flex justify-content-center row">
+            <div class=" container col-sm-11">
+                    <div class=" bg-white rounded">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                <button type="button" class="btn btn-outline btn-lg fw-bold " style="background-color:#a80893c3; " data-bs-toggle="modal" data-bs-target="#exampleModal">client Anastasia<img src="https://img.icons8.com/doodle/44/undefined/used-product.png" > </button>
+                                </div>
                             </div>
-                        
+                            <div class="mt-3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped ">
+                                        <thead>
+                                            <tr style=" background:#a80893c3;">
+                                                <th>Prenon</th>
+                                                <th>Nom</th>
+                                                <th>Email</th>
+                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fw-bold">
+                                            <tr class="bg-client">
+                                            <?php 
+                                                    $client = new AdministrateurController();
+                                                    $clientes=$client->getAllClient();
+                                                    foreach($clientes as $client){
+                                                ?>
+                                                <tr>
+                                                    <td ><?= $client['nom_user'] ?></td>
+                                                    <td><?= $client['prenom_user'] ?></td>
+                                                    <td><?= $client['email_user'] ?></td>
+                                                </tr>
+                                            </tr>
+                                            <?php } ?>  
+                                                    
+                                                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="table-responsive "style="width: 1553px; margin-left: 271px;">
-                    <table class="table table-striped table align-middle" id="myTableclient">
-                        <thead>
-                            <tr style=" background:#a80893c3;">
-                                <th>Prenon</th>
-                                <th>Nom</th>
-                                <th>Email</th>
-                              
-                            </tr>
-                        </thead>
-                        <tbody class="fw-bold">
-                                    <tr class="bg-client">
-                                    <?php 
-                            $client = new AdministrateurController();
-                            $clientes=$client->getAllClient();
-                            foreach($clientes as $client){
-                             ?>
-                                        <tr>
-                                            <td ><?= $client['nom_user'] ?></td>
-                                            <td><?= $client['prenom_user'] ?></td>
-                                            <td><?= $client['email_user'] ?></td>
-                                        </tr>
-                                    </tr>
-                                    <?php } ?>  
-                                    
-                                    
-                        </tbody>
-                    </table>
-                    </div>
             </div>
-
-        </div>
-
+        </div>	
     </div>
-
-</div>
-  
-	
-
 </body>
 </html>

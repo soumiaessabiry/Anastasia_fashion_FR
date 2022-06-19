@@ -2,16 +2,7 @@
 require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 class Administrateur extends Connextiondb
 	{
-		// public function creatAdmine($nom_admin,$prenom_admin,$Role, $emailadm, $passwordadmin){
-
-		// 	$querinsertadm=$this->connect()->exec("INSERT INTO `admines`(`idadmin`, `nom_admine`, `prenom_admin`, `role_adm`, `email_admin`, `password_admin`) VALUES (NULL,'$nom_admin','$prenom_admin','$Role','$emailadm','$passwordadmin')");
-		// 	if ($querinsertadm) {
-		// 		return true;
-		// 	}else{
-		// 	return false;
-		//     }
-
-		// }
+	
 
 		public function afficheAdmin(){
 
@@ -19,6 +10,7 @@ class Administrateur extends Connextiondb
 			return $prepare=$this->connect()->query($queraffadmin)->fetchALL();
 
 		}
+
 
 		public function updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn){
 
@@ -35,11 +27,4 @@ class Administrateur extends Connextiondb
 			$reqdeletAdmin=$this->connect()->exec("DELETE FROM `admines` WHERE `idadmin`='$iddeletadm' ");
 			return     $reqdeletAdmin;
 		}
-	} 
-	
-
-   
-
-
-
-?>
+	}

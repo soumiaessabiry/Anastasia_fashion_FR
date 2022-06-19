@@ -2,19 +2,7 @@
 <?php
 class AdministrateurController  {
 
-	// public function addadmin(){
-
-	// 	if (isset($_POST['Addadmin'])){ 
-	// 		$admines=new Administrateur();
-	// 		$nom_admin=$_POST['nomadmin'];
-	// 		$prenom_admin=$_POST['prenomadmin'];
-	// 		$Role=$_POST['role_adm'];
-	// 		$emailadm=$_POST['emailadmin'];
-	// 		$passwordadmin=$_POST['passwordadmin'];
-	// 		if($admines->creatAdmine($nom_admin,$prenom_admin,$Role,$emailadm,$passwordadmin)) header('location:Admin');
-
-	// 	}
-	// }
+	
 	
 	public function getAlladmin(){
 
@@ -118,7 +106,7 @@ public function loginUsers(){
 		}elseif($res['role_user'] =='Designer') {
 				header('location:dashborddesigner');
 		}else{
-			header('location:DashboardClient');
+			header('location:home');
 		}
 		$_SESSION["id_users"] =$res['id_user'];
 		$_SESSION["prenom_user"] = $res['prenom_user'];
@@ -133,11 +121,12 @@ public function addProduit(){
 		// $id_designer=$_SESSION["nom_user"];
 		$nom_product = $_POST['prodajouter'];
 		$description_product = $_POST['discrip'];
+		$Taille_produit= $_POST['taille_produ'];
 		$prix_product = $_POST['prixproduit'];
 		$img_product = $_POST['imgproduit'];
 		$qutiter_product = $_POST['quantproduit'];
 
-		if($products->ajouterproduit($nom_product,$description_product,$prix_product ,$img_product,$qutiter_product,$_SESSION["id_users"]))
+		if($products->ajouterproduit($nom_product,$description_product,$Taille_produit,$prix_product,$img_product,$qutiter_product,$_SESSION["id_users"]))
 		 header('location:produiddesigner');
 
 	}
@@ -145,7 +134,12 @@ public function addProduit(){
 
 public function getAllproduit(){
 	$products=new Product();
-	return $products->afficheProduct($_SESSION["id_users"]);  
+	return $products->afficheProduct();  
+
+}
+public function getaproduct(){
+	$products=new Product();
+	return $products->afficheUSER($_SESSION["id_users"]);  
 
 }
 
@@ -155,18 +149,85 @@ public function updatedeproduit(){
 		$id_product = $_POST['updproduite'];
 		$nom_productupd = $_POST['nomproduitupde'];
 		$description_productupd = $_POST['discrupdprod'];
+		$Taille_produitupd = $_POST['taille_produp'];
 		$img_productupd = $_POST['imgprodupd'];
 		$prix_productupd = $_POST['prixprodupd'];
 		$qutiter_productupd = $_POST['quantprodupd'];
-		if($products->updateproduct($id_product,$nom_productupd,$img_productupd,$description_productupd ,$prix_productupd,$qutiter_productupd,$_SESSION["id_users"])) header('location:produiddesigner');
+		if($products->updateproduct($id_product,$nom_productupd,$img_productupd,$description_productupd ,$Taille_produitupd,$prix_productupd,$qutiter_productupd)) header('location:produiddesigner');
 		}
 }
 
-public function deletProduit(){
+    public function deletProduit(){
 	if(isset($_POST['deletProduit'])){
 		$products= new Product(); 
 		if($products->deletproduit($_POST['updproduite'])) header('location:produiddesigner');
 		} 
+	}
+
+
+	public function creatPanier(){
+		if(isset($_POST['achter'])){
+			$commands= new Command();
+			$_SESSION['id_produit']=$_POST['id_produit'];
+			if (isset($_SESSION['id_produit']) && !empty($_SESSION['id_produit'])) {
+				$product = $commands->creatCommand($_SESSION['id_produit'],$_SESSION['prix_produit'],$_SESSION['Taille'],);
+			return $product;
+			}
+			
+			
+		}
+	}
+
+	public function addcommand(){
+		if (isset($_POST['Achter']) && !empty($_POST['Achter'])){ 
+			$commands = new Command();
+
+			// $_SESSION['id_client']=$_POST['id_user_product'];
+			// $_SESSION['id_produit']=$_POST['id_produit'];
+			// $_SESSION['date']=$_POST['date'];
+			// $_SESSION['nom_produit']=$_POST['nom_produit'];
+			$nom_produit=$_POST['nom_produit'];
+			// $id_produit=$_POST['id_produit'];
+			$prix=$_POST['prix_produit'];
+			$quatiter=$_POST['qutiterproduit'];
+			$Taille_produit=$_POST['taille'];
+			$date=date("Y-m-d H:i:s", strtotime('-2 hours'));
+
+	
+			if($commands->addcommand($_SESSION['id_produit'],$nom_produit,$prix,$Taille_produit,$quatiter,$date,$_SESSION["email_user"]))
+			 header('location:moncommand');
+
+	
+		}
+	}
+	public function getCommandbyclient(){
+		$commandclient=new Command();
+		return $commandclient->affichecommand($_SESSION["email_user"]);  
+	
+	}
+	public function getAllCommand(){
+		$commandclient=new Command();
+		return $commandclient->afficheAllCommand();  
+	
+	}
+	// public function getCommandbydesigner(){
+	// 	$commandclient=new Command();
+	// 	return $commandclient->affichecommandbydesigner($_SESSION["id_users"]);  
+	
+	// }
+	public function delecommand(){
+		if(isset($_POST['deletcommand'])){
+			$commandclient=new Command();
+			if($commandclient->delecommande($_POST['deletcommand'])) header('location:moncommand');
+			} 
+		
+
+	}
+	
+	public function getAllUser(){
+		$users=new Client();
+		return $users->afficheUserConnect($_SESSION["id_users"]);  
+
 	}
 
 }

@@ -29,70 +29,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
-    <title>command designer</title>
+    <title>client anasatasia</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
     <link href="././public/css/admin.css" rel="stylesheet" />
 
 </head>
 <body>
-<div class="wrapper">
 
-<div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
-            <div class="  mx-3 mt-3 table-wrapper" style="height:100vh">
-                    <div class="table-title">
-                        <div class="">
-                            <div class="col">
-                            <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#53104aa6; margin-left:215px;margin-top: 75px;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
-                            <!-- <a href="#addetud"   data-bs-toggle="modal" databs-target="#exampleModal">ADD Admin <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></a> -->
+    <div class="container-fluid mt-2">
+
+        <div class="d-flex justify-content-center row">
+            <div class=" container col-sm-11">
+                    <div class=" bg-white rounded">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-md-6 text-center ">
+                                <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#53104aa6;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
+                                </div>
                             </div>
-                        
+                            <div class="mt-3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped ">
+                                        <thead>
+                                        <tr style=" background-color: #53104aa6;">
+                                        <th>idproduct</th>
+                                        <th>id_Command</th>
+                                        <th>produit</th>
+                                        <th>client commander</th>
+                                        <th>prix</th>
+                                        <th>quantiter</th>
+                                        <th>date de commande</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="fw-bold">
+                                            <tr class="bg-client">
+                                            </tr>    
+                                                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="table-responsive " style=" margin-left: 94px;">
-                    <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
-                        <thead>
-                            <tr style=" background-color: #53104aa6;">
-                                <th  hidden >idproduct</th>
-                                <th>produit</th>
-                                <th>client commander</th>
-                                <th>prix</th>
-                                <th>quantiter</th>
-                                <th>date de commande</th>
-                               
-                            </tr>
-                        </thead>
-                        <tbody class="fw-bold">
-                            <tr class="bg-product">
-                                <td class="text-nowrap">produit A </td>
-                                <td class="text-nowrap">client x</td>
-                                <td class="text-nowrap">300dh</td>
-                                <td class="text-nowrap">2</td>
-                                <td class="text-nowrap"> j-m-A</td>
-                            </tr>
-                            <tr id="spacing-row">
-                            <td></td>
-                            </tr>
-                       
-                            <tr class="bg-product">
-                               
-                                <td class="text-nowrap">produit A </td>
-                                <td class="text-nowrap">client x</td>
-                                <td class="text-nowrap">300dh</td>
-                                <td class="text-nowrap">2</td>
-                                <td class="text-nowrap"> j-m-A</td>
-                            </tr>
-                            <tr id="spacing-row">
-                            <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div>
             </div>
-
-        </div>
-
+        </div>	
     </div>
-	
-
 </body>
 </html>

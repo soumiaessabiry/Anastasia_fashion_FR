@@ -14,7 +14,12 @@ class Client extends Connextiondb
 
 		}
 		// 	$querinsertadm=$this->connect()->exec("INSERT INTO `admines`(`idadmin`, `nom_admine`, `prenom_admin`, `role_adm`, `email_admin`, `password_admin`) VALUES (NULL,'$nom_admin','$prenom_admin','$Role','$emailadm','$passwordadmin')");
+		public function afficheUserConnect($idusersconnect){
 
+			$querafAllusers="SELECT * FROM  users  where `id_user`='$idusersconnect'";
+			return $prepare=$this->connect()->query($querafAllusers)->fetchALL();
+
+		}
 
 
 		public function afficheclient(){
@@ -24,16 +29,7 @@ class Client extends Connextiondb
 
 		}
 
-		// public function updatAdmi($NomCompAdmin,$emailAdmn,$passwordadmn,$updatAdmin){
-
-		// 	$requpdateAdmin=" UPDATE `admines` SET `nom_complet_admin`='$NomCompAdmin',`email_admin`='$emailAdmn',`password_admin`='$passwordadmn' WHERE `idadmin`='$updatAdmin'";
-		// 	$resupdate=$this->connect()->exec($requpdateAdmin);
-		// 	if ($requpdateAdmin) {
-		// 		return true;
-		// 	}else{
-		// 		return false;
-		// 	}
-		// }
+	
 
 		public function deletadmin($iddeletadm){
 			$reqdeletAdmin=$this->connect()->exec("DELETE FROM `admines` WHERE `idadmin`='$iddeletadm' ");

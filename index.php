@@ -11,7 +11,8 @@ if(basename($_SERVER['REQUEST_URI'])==="home" || basename($_SERVER['REQUEST_URI'
 }
 if(basename($_SERVER['REQUEST_URI'])==="operation" || basename($_SERVER['REQUEST_URI'])==="Dashboardadmin" ||basename($_SERVER['REQUEST_URI'])==="fashiondesigner" ||basename($_SERVER['REQUEST_URI']) ==="signup" ||basename($_SERVER['REQUEST_URI'])==="clientanastasia"||basename($_SERVER['REQUEST_URI'])==="produiddesigner" ||basename($_SERVER['REQUEST_URI'])==="allproduct"||basename($_SERVER['REQUEST_URI'])==="home"||basename($_SERVER['REQUEST_URI'])==="profilClient"
 ||basename($_SERVER['REQUEST_URI'])==="showproduct"||basename($_SERVER['REQUEST_URI'])==="moncommand"||basename($_SERVER['REQUEST_URI'])==="profilAdmin"
-||basename($_SERVER['REQUEST_URI'])==="profilfashiondes"||basename($_SERVER['REQUEST_URI'])==="sidbaradm"||basename($_SERVER['REQUEST_URI'])==="sidebardesigner"||basename($_SERVER['REQUEST_URI'])==="sidebarclient"||basename($_SERVER['REQUEST_URI'])==="productanastasia"){
+||basename($_SERVER['REQUEST_URI'])==="profilfashiondes"||basename($_SERVER['REQUEST_URI'])==="sidbaradm"||basename($_SERVER['REQUEST_URI'])==="sidebardesigner"||basename($_SERVER['REQUEST_URI'])==="sidebarclient"||basename($_SERVER['REQUEST_URI'])==="productanastasia"
+||basename($_SERVER['REQUEST_URI'])==="dashborddesigner"){
 require_once('../Anastasia_fashion_FR/models/modeladmin.php');
 require_once('../Anastasia_fashion_FR/models/modeldesigner.php');
 require_once('../Anastasia_fashion_FR/models/modelclient.php');
@@ -56,6 +57,14 @@ require_once('./autoload.php');
 require_once('./controllers/HomeController.php');
 $home =new HomeController();
 $pages=
+  [
+      'updatepoduit','showproduct',
+      'profilAdmin','profilfashiondes','produiddesigner','productanastasia',
+      'login','fashiondesigner','dashborddesigner','Dashboardadmin','commanddesigner',
+      'clientdesigner','clientanastasia','allproduct','Admin','sidebar','sidebardesigner',
+      'home','commandanastasia','sidbaradm','panier','logout','404','signup','operation','modeladmin','modeldesigner','modelclient','modelproduct','Panier','moncommand','profilClient','sidebarclient'
+  ];
+  $pages=
   [
       'updatepoduit','showproduct',
       'profilAdmin','profilfashiondes','produiddesigner','productanastasia',

@@ -1,4 +1,8 @@
+ <?php if($_SESSION['role']!='Admin'){
 
+  header('location:home');
+ 
+}?> 
 <div class="top_navbar">
 
     <div class="hamburger">
@@ -49,6 +53,7 @@
                   <span class="title">Fashion designer</span>
                 </a>
               </li>
+              
               <li>
                 <a href="productanastasia">
                   <span class="icon"><img src="https://img.icons8.com/external-creatype-filed-outline-colourcreatype/45/undefined/external-fashion-outfit-filed-outline-creatype-filed-outline-colourcreatype-25.png"/></span>
@@ -65,6 +70,12 @@
                  <a href="clientanastasia">
                   <span class="icon"><img src="https://img.icons8.com/fluency/45/undefined/user-group-woman-woman.png"/></span>
                   <span class="title">Client Anastasia</span>
+                </a>
+              </li>
+              <li>
+                 <a href="logout">
+                  <span class="icon"><img src="https://img.icons8.com/fluency/45/undefined/user-group-woman-woman.png"/></span>
+                  <span class="title">logout</span>
                 </a>
               </li>
             </ul>

@@ -39,7 +39,11 @@
                     <div class="card-body">
                     <h5 class="card-title fw-bold bg-bleu"> Mes Product </h5>
                     <p class="card-text fw-bold fs-3">
-                     
+                    
+                    <?php 
+                       $products = new AdministrateurController();
+                      echo count($products->getaproduct());            
+                      ?>
                     </p>
                     </div>
                 </div>

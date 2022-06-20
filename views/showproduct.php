@@ -1,3 +1,8 @@
+<?php
+if(!isset($_SESSION['role'])){
+			header('location:login');}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +38,7 @@
                     <div class="image"><img src="./public/image/<?= $products['image_produit'] ?>" alt="pr-sample23" />
                     </div>
                         <figcaption>
-                            <h3  style="color:#fff"><?php echo $products['nom_produit']; ?></h3><br>
+                            <h3  style="color:#fff"><?= $products['nom_produit'] ?? ''?></h3><br>
                             <button class="btn btn-lg p-3 fs-3" style="background: #410000; color:azure" ><?php echo $products['prix_produit']; ?>DH</button>
                         </figcaption>
                         <a href="#"></a>

@@ -1,3 +1,6 @@
+<?php if( $_SESSION['role']!='Designer'){
+  header('location:home');
+  }?>
 <script>
 		$(document).ready(function(){
 			$(".hamburger .hamburger__inner").click(function(){
@@ -73,6 +76,12 @@
                  <a href="clientdesigner">
                   <span class="icon"><img src="https://img.icons8.com/fluency/45/undefined/user-group-woman-woman.png"/></span>
                   <span class="title">Mes client</span>
+                </a>
+              </li>
+              <li>
+                 <a href="logout">
+                  <span class="icon"><img src="https://img.icons8.com/fluency/45/undefined/user-group-woman-woman.png"/></span>
+                  <span class="title">logout</span>
                 </a>
               </li>
             </ul>

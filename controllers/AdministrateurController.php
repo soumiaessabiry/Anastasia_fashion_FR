@@ -101,6 +101,12 @@ public function loginUsers(){
 		$emaillogin = $_POST['emailuser'];
 		$passwordlogin = $_POST['passworduser'];
 		$res = $logine->login($emaillogin,$passwordlogin);
+		$_SESSION['log']==true;
+		$_SESSION["id_users"] =$res['id_user'];
+		$_SESSION["prenom_user"] = $res['prenom_user'];
+		$_SESSION["nom_user"] = $res['nom_user'];
+		$_SESSION["email_user"] = $res['email_user'];
+		$_SESSION["role"] = $res['role_user'];
 		if($res['role_user'] == 'Admin') {
 				header('location:Dashboardadmin');
 		}elseif($res['role_user'] =='Designer') {
@@ -108,10 +114,6 @@ public function loginUsers(){
 		}else{
 			header('location:home');
 		}
-		$_SESSION["id_users"] =$res['id_user'];
-		$_SESSION["prenom_user"] = $res['prenom_user'];
-		$_SESSION["nom_user"] = $res['nom_user'];
-		$_SESSION["email_user"] = $res['email_user'];
 	}
 }
 //*******************************************product***************************************************** */
@@ -169,25 +171,21 @@ public function updatedeproduit(){
 		if(isset($_POST['achter'])){
 			$commands= new Command();
 			$_SESSION['id_produit']=$_POST['id_produit'];
-			if (isset($_SESSION['id_produit']) && !empty($_SESSION['id_produit'])) {
-				$product = $commands->creatCommand($_SESSION['id_produit'],$_SESSION['prix_produit'],$_SESSION['Taille'],);
+				@$product = $commands->creatCommand($_SESSION['id_produit'],$_SESSION['prix_produit'],$_SESSION['Taille'],);
 			return $product;
-			}
+			
 			
 			
 		}
 	}
 
 	public function addcommand(){
+		
 		if (isset($_POST['Achter']) && !empty($_POST['Achter'])){ 
 			$commands = new Command();
 
-			// $_SESSION['id_client']=$_POST['id_user_product'];
-			// $_SESSION['id_produit']=$_POST['id_produit'];
-			// $_SESSION['date']=$_POST['date'];
-			// $_SESSION['nom_produit']=$_POST['nom_produit'];
+		
 			$nom_produit=$_POST['nom_produit'];
-			// $id_produit=$_POST['id_produit'];
 			$prix=$_POST['prix_produit'];
 			$quatiter=$_POST['qutiterproduit'];
 			$Taille_produit=$_POST['taille'];
@@ -210,11 +208,11 @@ public function updatedeproduit(){
 		return $commandclient->afficheAllCommand();  
 	
 	}
-	// public function getCommandbydesigner(){
-	// 	$commandclient=new Command();
-	// 	return $commandclient->affichecommandbydesigner($_SESSION["id_users"]);  
+	public function getCommandbydesigner(){
+		$commandclient=new Command();
+		return $commandclient->affichecommand($_SESSION["id_users"]);  
 	
-	// }
+	}
 	public function delecommand(){
 		if(isset($_POST['deletcommand'])){
 			$commandclient=new Command();

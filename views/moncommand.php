@@ -12,18 +12,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>mon comand</title>
-    <link rel="stylesheet" href="././public/css/dachbord.css">
-    <link href="././public/css/admin.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="././public/css/dachbord.css"> -->
+    <!-- <link href="././public/css/admin.css" rel="stylesheet" /> -->
+    <style>
+    
+    a{
+        text-decoration: none !important;
+    }
+    .card:hover{
+        background: #410839 !important;
+        color: white !important;
+        font-weight: bold !important;
+        pointer-events: painted !important;
+    }
+    .btnsidbar:hover {
+    color: #410839 !important;
+    background: #ffffff5c !important ;
+    font-weight: bolder !important;
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .offcanvas{
+    background: #410839 !important;
+    color: white !important;
 
+    }
+    .btn{
+    /* color: aliceblue !important; */
+    text-align: inherit !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    }
+    a{
+    text-decoration: none !important;
+    color: white !important;
+
+    }
+    img{
+    border: none !important;
+    }
+
+    .btnmenu{
+    border: none !important;
+    }
+
+    
+    </style>
 </head>
 <body>
 
 <div class="container-fluid mt-5">
-        <div class="d-flex justify-content-center row">
-            <div class=" container col-md-8">
-                <div class="p-3 bg-white rounded">
+        <div class="d-flex justify-content-center row" style="margin-top: 82px;">
+        
                     <div class="row">
-                       
                         <div class="col-md-6 text-right mt-3">
                             <h4 class="text-danger mb-0">Mon Command</h4></div>
                     </div>

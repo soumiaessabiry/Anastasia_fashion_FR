@@ -86,8 +86,10 @@ if(isset($_GET['page'])){
 
   }
 
+if (basename($_SERVER['REQUEST_URI'])==="home") {
+  require_once('views/includes/footer.php');
 
-
+}
 
 
 

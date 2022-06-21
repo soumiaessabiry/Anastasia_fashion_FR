@@ -1,9 +1,6 @@
 
 <?php
 class AdministrateurController  {
-
-	
-	
 	public function getAlladmin(){
 
 		$admines=new Administrateur();
@@ -35,8 +32,9 @@ class AdministrateurController  {
 						$Role=$_POST['role'];
 						$Email_Designer=$_POST['emaildesfas'];
 						$password_Designer=$_POST['passworddesfas'];
-					
-						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$password_Designer)) header('location:fashiondesigner');
+						$passworddesignerhach=password_hash($password_Designer,PASSWORD_DEFAULT);
+
+						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$passworddesignerhach)) header('location:fashiondesigner');
 			
 					}
 				}
@@ -58,7 +56,9 @@ class AdministrateurController  {
 						$Role_desig=$_POST['roleupd'];		
 						$Email_Designerupd=$_POST['emaildesfasupd'];
 						$password_Designerupd=$_POST['passworddesfasupd'];
-						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$password_Designerupd,$id_designerupd)) header('location:fashiondesigner');
+					     $passworddesignerhachupd=password_hash($password_Designerupd,PASSWORD_DEFAULT);
+
+						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$passworddesignerhachupd,$id_designerupd)) header('location:fashiondesigner');
 						}
 				}
 			

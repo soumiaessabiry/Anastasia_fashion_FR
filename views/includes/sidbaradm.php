@@ -1,8 +1,9 @@
  <?php if($_SESSION['role']!='Admin'){
 
   header('location:home');
- 
+  echo $_SESSION['role'];
 }?> 
+
 <div class="top_navbar">
 
     <div class="hamburger">

@@ -60,7 +60,7 @@ if(!isset($_SESSION['role'])){
                                     <input type="hidden" name="nom_produit" value="<?php echo $products['nom_produit']; ?>">
                                    <input type="hidden" name="prix_produit" value="<?php echo $products['prix_produit']; ?>">
                                     <input type="hidden" name="id_produit" value="<?php echo $products['id_produit']; ?>">
-                                    <input type="number" name="qutiterproduit" id="qutiterproduit" value="1" >
+                                    <input type="number" name="qutiterproduit"  max='20' min="1" id="qutiterproduit" value="1" >
                                     <input class="fw-bold btn btn-outline-success" type="submit" name=" Achter"  value="valider " >
                                     </p>
                                     </form>

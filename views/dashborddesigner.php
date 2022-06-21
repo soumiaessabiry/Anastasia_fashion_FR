@@ -55,7 +55,7 @@
                    <span class="icon"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/undefined/external-fashion-designer-modelling-agency-flaticons-lineal-color-flat-icons-5.png"/></span>
                     <div class="card-body">
                         <h5 class="card-title fw-bold "> Mes Command </h5>
-                        <p class="card-text fw-bold fs-3">Totale Command </p>
+                        <p class="card-text fw-bold fs-3">Totales Commands </p>
                     </div>
                 </div>
             </div>

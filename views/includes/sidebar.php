@@ -22,6 +22,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item compte"><a class="nav-link" href="login">&emsp; <img src="https://img.icons8.com/ios-filled/30/undefined/user-rights.png"/> &emsp; Connexion</a></li>
                                 <li class="nav-item compte"><a class="nav-link" href="signup">&emsp; <img src="https://img.icons8.com/ios-glyphs/30/undefined/user--v1.png"/> &emsp; Inscription</a></li>
+                                <li class="nav-item compte"><a class="nav-link" href="logout">&emsp; <img src="https://img.icons8.com/ios-glyphs/30/undefined/user--v1.png"/> &emsp; logout</a></li>
                   
                             </ul>
                         </li>

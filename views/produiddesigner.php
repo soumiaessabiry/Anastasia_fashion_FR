@@ -32,6 +32,9 @@
     <title>produiddesigner</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
     <link href="././public/css/admin.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js%22%3"></script>
+    <link rel="stylesheet" type="text/css" href="http://parsleyjs.org/src/parsley.css" />
 
 </head>
 <body>
@@ -157,10 +160,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Update designer </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" required data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate>
+                <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate="">
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">id </label>
                         <input type="text" class="form-control" id="id_produit" name="updproduite" placeholder="Enter nom" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
@@ -175,7 +178,7 @@
                     </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">discription</label>
-                        <textarea   rows="10" type="text" class="form-control" id="discrupdprode" name="discrupdprod" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" ></textarea>
+                        <textarea   rows="10" type="text" class="form-control" id="discrupdprode" name="discrupdprod" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" required ></textarea>
                     </div>
                     <div class="mb-3 fw-bold">
                 <label for="cars">Ajouter la taille:</label>

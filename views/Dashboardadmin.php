@@ -25,6 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title> dachbord admin</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
+  
 
 </head>
 <body>
@@ -32,7 +33,7 @@
 <div class="wrapper">
 
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-4  g-4">
+        <div class="row row-cols-1 row-cols-md-4  g-4 ">
             <div class="col col-md-6 col-sm-12">
                 <div class="card h-100 " style="  border: 5px solid #dc379d79; border-radius:10px; padding:10px ; background: #dc379d79;box-shadow: #c765ba;">
                     <span class="icon"><img src="https://img.icons8.com/fluency/68/undefined/user-group-woman-woman.png"/></span>

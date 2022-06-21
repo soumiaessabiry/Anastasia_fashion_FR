@@ -16,12 +16,11 @@ body {
 }
 
 .wrapper {
-    /* max-width: 400px;
-    min-height: 600px; */
-    width: 500px;
-    margin:2Px auto;
+  
+    width:  60vw;
+    margin:1Px auto;
     margin-top: 100px !important;
-    padding: 40px  20px;
+    padding: 30px  20px;
     background-color: #ecf0f3;
     border-radius: 10px;
     box-shadow: 3px 3px 6px #cbced1, -19px -13px 39px #26778f;
@@ -29,7 +28,7 @@ body {
 
 
 .wrapper .form-field input {
-    /* width: 100%; */
+    width: 100%;
     display: block;
     border: none;
     outline: none;
@@ -75,6 +74,7 @@ body {
     /* font-size: 0.8rem; */
     color: #ab64a2;
     font-weight: bold;
+    margin-top: 100;
 }
 
 .wrapper a:hover {
@@ -83,7 +83,7 @@ body {
 
  @media(max-width: 380px) {
     .wrapper {
-       width: 270px;
-     margin: 10px auto;
+       width: 50%;
+     margin: 3px auto;
     }
 }

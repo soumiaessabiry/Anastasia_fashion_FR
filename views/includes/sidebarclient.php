@@ -1,17 +1,7 @@
 <?php if( $_SESSION['role']!='Client'){
   header('location:home');
   }?>
-<script>
-		$(document).ready(function(){
-			$(".hamburger .hamburger__inner").click(function(){
-			  $(".wrapper").toggleClass("active")
-			})
 
-			$(".top_navbar .fas").click(function(){
-			   $(".profile_dd").toggleClass("active");
-			});
-		})
-	</script>
 <div class="top_navbar">
 
     <div class="hamburger">

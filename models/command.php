@@ -3,12 +3,18 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 class Command extends Connextiondb
 	{
         public function creatCommand($produit_selct){
-			$createPanier="SELECT * FROM `produit` WHERE `id_produit`= $produit_selct";
+			$createPanier="SELECT * FROM `produit` WHERE `id_produit`= $produit_selct" ;
 			return $prepare=$this->connect()->query($createPanier)->fetchAll();
 			
 			
 		}
 		public function addcommand($id_produit,$nom_produit,$prix,$Taille_produit,$quatiter,$date,$gmail_client){
+			// $qnt=$this->connect()->query("SELECT quantiter_produit FROM produit where id_produit=$id_produit")->fetch();
+			// var_dump($qnt);
+
+			// if ($qnt> $quatiter) {
+			// 	echo " qutitier et insufisant";
+			// }else
 			$querinsertdproduct = $this->connect()->exec("INSERT INTO `command` (`id_command`,`id_produit`,`nom_prod_commder`,`prix_prod_commder`,`taille`,`quantiter`,`date_commande`,`gmail_client`) 
 			VALUES (NULL,'$id_produit','$nom_produit','$prix','$Taille_produit','$quatiter','$date','$gmail_client')");
 			if ($querinsertdproduct) {

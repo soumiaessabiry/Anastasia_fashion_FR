@@ -84,7 +84,7 @@
                                 <td class="d-flex  align-items-start">
                                     <button name="updproduite" class="btn btn-outline-primary  fw-bold updateproduc" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
                                     <form  action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletProduit" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">
-                                        <input type="text" hidden name="updproduite" value="<?= $products['id_produit'] ?> "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
+                                        <input type="text" hidden name="updproduite" value="<?= $products['id_produit']  ?> "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
                                     </form> 
                                 </td>
                             </tr>
@@ -111,10 +111,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate>
+                <form class="form-container" action="operation" id="form1" method="POST"data-parsley-validate="">
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">produit </label>
-                        <input type="text" class="form-control" id="prodajouterr" name="prodajouter" placeholder="Enter nom" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <input type="text" class="form-control" id="prodajouterr" name="prodajouter" placeholder="Enter nom" style="margin-bottom: 32px;" minlength="4"  maxlength="30" data-parsley-trigger="change" required>
                 </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label"></label>
@@ -122,11 +122,11 @@
                     </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">discription</label>
-                        <textarea   rows="10" type="text" class="form-control" id="discriptionproduit" name="discrip" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" ></textarea>
+                        <textarea   rows="10" type="text" class="form-control" id="discriptionproduit"  data-parsley-words="[10,200]"	  name="discrip" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" ></textarea>
                 </div>
                 <div class="mb-3 fw-bold">
                 <label for="cars">Ajouter la taille:</label>
-                    <select name="taille_produ" id="taille_prod">
+                    <select name="taille_produ" id="taille_prod"  data-parsley-error-message="This value is required." data-parsley-trigger="change" required="">
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
@@ -136,13 +136,13 @@
                 </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">prix</label>
-                        <input type="text" class="form-control" id="prixproduit" name="prixproduit" placeholder="Enter le prix" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <input type="number" class="form-control" id="prixproduit"  min="1" max="800" name="prixproduit" placeholder="Enter le prix"  style="margin-bottom: 32px;" data-parsley-trigger="change" required>
                     </div>
    
                     
                     <div class="mb-3  fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">Quantiter</label>
-                            <input type="number" data-parsley-type="email" class="form-control" id="quantproduit" name="quantproduit" placeholder="Enter la quantiter" required data-parsley-trigger="change">
+                            <input type="number" data-parsley-type="email" class="form-control" id="quantproduit" name="quantproduit" placeholder="Enter la quantiter"  min="1" max="30" required data-parsley-trigger="change">
                     </div>
                     <input type="submit" name="addoroduct" class="btn btn-outline-warning btn-lg " style="background-color:#410839c3; color:aliceblue"   value="Ajouter product">
                     <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
@@ -166,11 +166,11 @@
                 <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate="">
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">id </label>
-                        <input type="text" class="form-control" id="id_produit" name="updproduite" placeholder="Enter nom" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <input type="text" class="form-control" id="id_produit" name="updproduite" placeholder="Enter nom"  min="3"	 max="20" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
                  </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">produit </label>
-                        <input type="text" class="form-control" id="nomproduitupd" name="nomproduitupde" placeholder="Enter nom" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <input type="text" class="form-control" id="nomproduitupd" name="nomproduitupde" placeholder="Enter nom"  min="3" max="20"  style="margin-bottom: 32px;" data-parsley-trigger="change" required>
                  </div>
                  <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label"></label>

@@ -32,9 +32,9 @@ class AdministrateurController  {
 						$Role=$_POST['role'];
 						$Email_Designer=$_POST['emaildesfas'];
 						$password_Designer=$_POST['passworddesfas'];
-						$passworddesignerhach=password_hash($password_Designer,PASSWORD_DEFAULT);
+						// $passworddesignerhach=password_hash($password_Designer,PASSWORD_DEFAULT);
 
-						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$passworddesignerhach)) header('location:fashiondesigner');
+						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$password_Designer)) header('location:fashiondesigner');
 			
 					}
 				}
@@ -56,9 +56,9 @@ class AdministrateurController  {
 						$Role_desig=$_POST['roleupd'];		
 						$Email_Designerupd=$_POST['emaildesfasupd'];
 						$password_Designerupd=$_POST['passworddesfasupd'];
-					     $passworddesignerhachupd=password_hash($password_Designerupd,PASSWORD_DEFAULT);
+					    //  $passworddesignerhachupd=password_hash($password_Designerupd,PASSWORD_DEFAULT);
 
-						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$passworddesignerhachupd,$id_designerupd)) header('location:fashiondesigner');
+						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$password_Designerupd,$id_designerupd)) header('location:fashiondesigner');
 						}
 				}
 			
@@ -190,8 +190,9 @@ public function updatedeproduit(){
 			$quatiter=$_POST['qutiterproduit'];
 			$Taille_produit=$_POST['taille'];
 			$date=date("Y-m-d H:i:s", strtotime('-2 hours'));
-
-	
+// var_dump($_POST['qutiterproduit']);
+// 	// var_dump($_POST);
+// 	// echo $_SESSION['id_produit'];
 			if($commands->addcommand($_SESSION['id_produit'],$nom_produit,$prix,$Taille_produit,$quatiter,$date,$_SESSION["email_user"]))
 			 header('location:moncommand');
 
@@ -210,7 +211,7 @@ public function updatedeproduit(){
 	}
 	public function getCommandbydesigner(){
 		$commandclient=new Command();
-		return $commandclient->affichecommand($_SESSION["id_users"]);  
+		return $commandclient->affichecommand($_SESSION["id_users"],$_SESSION['']);  
 	
 	}
 	public function delecommand(){

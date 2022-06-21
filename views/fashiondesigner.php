@@ -36,6 +36,9 @@
     <title>Fashiondesigner</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
     <link href="././public/css/admin.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js%22%3"></script>
+    <link rel="stylesheet" type="text/css" href="http://parsleyjs.org/src/parsley.css" />
 
 </head>
 <body>
@@ -83,7 +86,7 @@
                                 <td><?= $designer['prenom_user'] ?></td>
                                 <td><?= $designer['role_user'] ?></td>
                                 <td><?= $designer['email_user'] ?></td>
-                                <td><?= $designer['password_user'] ?></td>
+                                <td><?= $designer['password_user']?></td>
                                     <td class="d-flex  align-items-start">
                                         <button name="iddesignere" class="btn btn-outline-primary  fw-bold updatefachdesg" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
                                         <form  action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletdesigner" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">

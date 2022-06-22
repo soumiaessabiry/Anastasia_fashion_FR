@@ -34,36 +34,35 @@
             <div class=" container form col-sm-11 " >
              <div class=" bg-white rounded">
                 <div class="col-md-6 border-right">
-    <?php 
-        $client = new AdministrateurController();
-        $clientes=$client->getAllUser();
-        foreach($clientes as $client){
-    ?>
+                <?php 
+                $client = new AdministrateurController();
+                $clientes=$client->getAllUser();
+                foreach($clientes as $client){
+                ?>
 
-<?php } ?> 
-                    <div class="d-flex flex-column align-items-left text-lrft p-3 "><img class="rounded-circle mt-5" src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/undefined/external-profile-web-smashingstocks-glyph-smashing-stocks.png" width="90">
+                <?php } ?> 
+                    <div class="d-flex flex-column align-items-left text-lrft p-3 " style="margin-top: 100px;">
+                    <img class="rounded-circle mt-5" src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/undefined/external-profile-web-smashingstocks-glyph-smashing-stocks.png" width="90">
                     <span class="fw-bold fs-4"><?= $client['nom_user'] ?></span>
                     <span class="text-black-50 fw-bold fs-4"><?= $client['email_user'] ?></span>
-                   
                 </div>
                 </div>
             <div class="col-md-12 p-3">
                 <div class="">
                     <form action="" id="myFormupd">
                     <div class="d-flex justify-content-between align-items-center ">
-                        <div class="d-flex flex-row align-items-left back mb-3">
-                        </div>
+                        <div class="d-flex flex-row align-items-left back mb-3"></div>
                     </div>
                     <div class="row ">
-                    <div class="col-md-8  mb-4"><span class="form-control fw-bold fs-4"  placeholder="nom_user"> Nom :<?= $client['nom_user'] ?></span></div>
-                    <div class="col-md-8  mb-4"><span class="form-control fw-bold fs-4" value="" placeholder="Prenom_user"> Prenom :<?= $client['prenom_user'] ?></span></div>
-                    <div class="col-md-10  mb-4"><span  class="form-control fw-bold fs-4" value="" placeholder="Email_user">Email:<?= $client['email_user'] ?></span></div>
-                    <div class="col-md-8  mb-2"><button class="form-control fw-bold fs-4" value="" placeholder="users_password">Rôle :<?= $client['role_user'] ?></div>
-                    <!-- <button class=" text-right btn btn-outline-info btn fw-bold " ><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/>Save mofification</button> -->
+                    <div class="col-md-6  mb-4"><span class="form-control fw-bold fs-4"  placeholder="nom_user"> Nom :<?= $client['nom_user'] ?></span></div>
+                    <div class="col-md-6  mb-4"><span class="form-control fw-bold fs-4" placeholder="Prenom_user"> Prenom :<?= $client['prenom_user'] ?></span></div>
+                    <div class="col-md-6  mb-4"><span  class="form-control fw-bold fs-4" placeholder="Email_user">Email:<?= $client['email_user'] ?></span></div>
+                    <div class="col-md-6  mb-4"><span class="form-control fw-bold fs-4" placeholder="users_password">Rôle :<?= $client['role_user'] ?></span></div>
                     </form>
-    
+                     </div>
                 </div>
             </div>
+             </div>
         </div>
     </div>
 </div>

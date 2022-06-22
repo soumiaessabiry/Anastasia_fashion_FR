@@ -1,0 +1,39 @@
+a{
+    text-decoration: none !important;
+}
+.card:hover{
+    background: #410839 !important;
+    color: white !important;
+    font-weight: bold !important;
+    pointer-events: painted !important;
+}
+.btnsidbar:hover {
+color: #410839 !important;
+background: #ffffff5c !important ;
+font-weight: bolder !important;
+padding-left: 0;
+padding-right: 0;
+}
+.offcanvas{
+background: #410839 !important;
+color: white !important;
+
+}
+.btn{
+/* color: aliceblue !important; */
+text-align: inherit !important;
+padding-left: 0 !important;
+padding-right: 0 !important;
+}
+a{
+text-decoration: none !important;
+color: white !important;
+
+}
+img{
+border: none !important;
+}
+
+.btnmenu{
+border: none !important;
+}

@@ -3,31 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <style>
-    ul{
-        padding-left: 0 !important;
-    }
-    a{
-        text-decoration: none !important;
-    }
-    .card:hover{
-        background: #410839 !important;
-        color: white !important;
-        font-weight: bold !important;
-        pointer-events: painted !important;
-    }
-    .card:hover{
-        background: #410839 !important;
-        color: white !important;
-        font-weight: bold !important;
-        pointer-events: painted !important;
-    }
-      li {
-        color: red !important;
-        font-weight: bold !important;
-    }
-    
-    </style>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,27 +15,19 @@
 
 </head>
 <body>
-
-<div class="wrapper">
-
-  
-             
-
-<div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
-        <div class="  mt-3 table-wrapper" style="height:100vh">
-            <div class="table-title">
-                <div class="">
-      
-                    <div class="col">
-                        
-                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 " style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal"> Admin Anasatasia <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button>
-                    </div>
-                   
-                </div>
+<div class="container-fluid mt-5">
+        <div class="d-flex justify-content-center row" style="margin-top: 82px;">
+        
+            <div class="row">
+                <div class="col-md-6 text-right mt-3">
+                <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 " style="background-color:#ab64a26a;" data-bs-toggle="modal" data-bs-target="#exampleModal"> Admin Anasatasia <img src="https://img.icons8.com/color/48/undefined/administrator-male-skin-type-7.png" style="width: 40px;height: 40px;"></button>
             </div>
-            <div class="table-responsive " style=" margin-left: 94px;">
-                <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
-                    <thead>
+           
+                    <div class="mt-3">
+                        <div class="table-responsive">
+                        <table class="table table-striped " id="myTable">
+                <thead class="fw-bold" style="background:#ab64a26a" >
+                        <tr>
                             <th >id</th>
                             <th>Nom </th>
                             <th>Prenom</th>
@@ -87,7 +55,7 @@
                             <td><?= $admine['email_user'] ?></td>
                             <td><?= $admine['password_user'] ?></td>
                             <td class="d-flex  align-items-start">
-                            <button name="idadmine" class="btn btn-outline-primary  fw-bold update" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
+                            <button name="idadmine" class="btn btn-outline-primary   fw-bold update" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/40/undefined/edit-user-female.png"/></a></button>
                             </td>
                         </tr>          
                         <?php } ?>
@@ -97,7 +65,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+                        </div>
+                    </div>
         </div>
 
 </div>
@@ -146,14 +115,11 @@
                         </div>
                     </form>              
                 </div>
-                <div class="modal-footer">
                 
-                </div>
+                
             </div>
         </div>
-    
     </div>
-
 
 </body>
 </html>

@@ -12,52 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>mon comand</title>
-    <!-- <link rel="stylesheet" href="././public/css/dachbord.css"> -->
+    <link rel="stylesheet" href="././public/css/dachbord.css">
     <!-- <link href="././public/css/admin.css" rel="stylesheet" /> -->
-    <style>
-    
-    a{
-        text-decoration: none !important;
-    }
-    .card:hover{
-        background: #410839 !important;
-        color: white !important;
-        font-weight: bold !important;
-        pointer-events: painted !important;
-    }
-    .btnsidbar:hover {
-    color: #410839 !important;
-    background: #ffffff5c !important ;
-    font-weight: bolder !important;
-    padding-left: 0;
-    padding-right: 0;
-    }
-    .offcanvas{
-    background: #410839 !important;
-    color: white !important;
-
-    }
-    .btn{
-    /* color: aliceblue !important; */
-    text-align: inherit !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    }
-    a{
-    text-decoration: none !important;
-    color: white !important;
-
-    }
-    img{
-    border: none !important;
-    }
-
-    .btnmenu{
-    border: none !important;
-    }
-
-    
-    </style>
+    <
 </head>
 <body>
 

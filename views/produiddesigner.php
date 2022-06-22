@@ -39,20 +39,16 @@
 </head>
 <body>
 
-<div class="container-fluid mt-2">
-
-<div class="d-flex justify-content-center row">
-    <div class=" container col-sm-11">
-            <div class=" bg-white rounded">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col">
-                        <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4;" data-bs-toggle="modal" data-bs-target="#exampleModal" > Ajouter un Produit <img src="https://img.icons8.com/doodle/34/undefined/used-product.png"/> </button>
-                        </div>
+<div class="container-fluid mt-5">
+        <div class="d-flex justify-content-center row" style="margin-top: 82px;">
+            <div class="row">
+                    <div class="col">
+                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4;" data-bs-toggle="modal" data-bs-target="#exampleModal" > Ajouter un Produit <img src="https://img.icons8.com/doodle/34/undefined/used-product.png"/> </button>
+                    </div>
                     </div>
                     <div class="mt-3">
                         <div class="table-responsive">
-                    <table class="table table-striped table align-middle" id="myTable">
+                    <table class="table table-striped table " id="myTable">
                         <thead>
                             <tr style=" background-color: #b72da4a4;">
                                 <th>ID_produit</th>

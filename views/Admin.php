@@ -11,7 +11,7 @@
     
     <title> dachbord admin</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
-    <link href="././public/css/admin.css" rel="stylesheet" />
+    <!-- <link href="././public/css/admin.css" rel="stylesheet" /> -->
 
 </head>
 <body>

@@ -3,7 +3,6 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 class Administrateur extends Connextiondb
 	{
 	
-
 		public function afficheAdmin(){
 
 			$queraffadmin="SELECT * FROM  users  where `role_user`='Admin'";

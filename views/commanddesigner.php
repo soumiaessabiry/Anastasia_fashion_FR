@@ -36,22 +36,18 @@
 </head>
 <body>
 
-    <div class="container-fluid mt-5">
-
+<div class="container-fluid mt-5">
         <div class="d-flex justify-content-center row" style="margin-top: 82px;">
-            <div class=" container col-sm-11">
-                    <div class=" bg-white rounded">
-                        <div class="table-title">
-                            <div class="row">
-                                <div class="col ">
-                                <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#53104aa6;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <div class="table-responsive">
-                                    <table class="table table-striped ">
-                                        <thead>
-                                        <tr style=" background-color: #53104aa6;">
+            <div class="row">
+                    <div class="col">
+                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4;  " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes command <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
+                    </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="table-responsive">
+                    <table class="table table-striped table " id="myTable">
+                        <thead>
+                                        <tr style=" background-color: #b72da4a4;">
                                         <th>idproduct</th>
                                         <th>id_Command</th>
                                         <th>produit</th>

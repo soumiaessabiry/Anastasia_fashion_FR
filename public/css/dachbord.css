@@ -37,3 +37,9 @@ border: none !important;
 .btnmenu{
 border: none !important;
 }
+tr:hover{
+    background: #b72da4a4 !important;
+    color: #410839 !important;
+    cursor: pointer !important;
+    
+}

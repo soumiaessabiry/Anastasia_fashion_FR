@@ -22,6 +22,12 @@
         font-weight: bold !important;
         pointer-events: painted !important;
     }
+    tr:hover{
+        background: #b72da4a4 !important;
+        color: #410839 !important;
+        cursor: pointer !important;
+        
+    }
     
     
     </style>
@@ -31,7 +37,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
     <title>produiddesigner</title>
     <link rel="stylesheet" href="././public/css/dachbord.css">
-    <link href="././public/css/admin.css" rel="stylesheet" />
+    <!-- <link href="././public/css/admin.css" rel="stylesheet" /> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js%22%3"></script>
     <link rel="stylesheet" type="text/css" href="http://parsleyjs.org/src/parsley.css" />

@@ -36,14 +36,14 @@
 </head>
 <body>
 
-<div class="container-fluid mt-2">
+<div class="container-fluid mt-5">
 
-    <div class="d-flex justify-content-center row">
+    <div class="d-flex justify-content-center row" style="margin-top: 82px;">
         <div class=" container col-sm-11">
                 <div class=" bg-white rounded">
                     <div class="table-title">
                         <div class="row">
-                            <div class="col-md-6 text-center mt-3">
+                            <div class="col">
                             <button type="button" class="btn btn-outline btn-lg fw-bold " style="background-color:#8b106273; " data-bs-toggle="modal" data-bs-target="#exampleModal"> Mes client <img src="https://img.icons8.com/doodle/64/undefined/used-product.png" > </button>
                             </div>
                         </div>

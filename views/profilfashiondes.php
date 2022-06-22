@@ -42,7 +42,8 @@
    
 </tr>
 <?php } ?> 
-                    <div class="d-flex flex-column align-items-left text-lrft p-3 "><img class="rounded-circle mt-5" src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/undefined/external-profile-web-smashingstocks-glyph-smashing-stocks.png" width="90">
+                    <div class="d-flex flex-column align-items-left text-lrft p-3 "  style="margin-top: 100px;">
+                        <img class="rounded-circle mt-5" src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/undefined/external-profile-web-smashingstocks-glyph-smashing-stocks.png" width="90">
                     <span class="fw-bold fs-4"><?= $client['nom_user'] ?></span>
                     <span class="text-black-50 fw-bold fs-4"><?= $client['email_user'] ?></span>
                    
@@ -59,7 +60,7 @@
                         <div class="col-md-8  mb-4"><span class="form-control fw-bold fs-4"  placeholder="nom_user"> Nom :<?= $client['nom_user'] ?></span></div>
                         <div class="col-md-8  mb-4"><span class="form-control fw-bold fs-4" value="" placeholder="Prenom_user"> Prenom :<?= $client['prenom_user'] ?></span></div>
                         <div class="cols-6 mb-4"><span  class="form-control fw-bold fs-4" value="" placeholder="Email_user">Email:<?= $client['email_user'] ?></span></div>
-                        <div class="col-md-10  mb-2"><button class="form-control fw-bold fs-4" value="" placeholder="users_password">Rôle :<?= $client['role_user'] ?></div>
+                        <div class="col-md-10  mb-2"><span class="form-control fw-bold fs-4" value="" placeholder="users_password">Rôle :<?= $client['role_user'] ?></span></div>
                     </form>
                    </div> 
                    </div>
@@ -67,7 +68,6 @@
             </div>
             </div>
         </div>
-    </div>
 
 
 

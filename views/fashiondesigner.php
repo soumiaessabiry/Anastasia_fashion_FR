@@ -43,23 +43,18 @@
 </head>
 <body>
 
-<div class="wrapper">
-
-             
-<div class="container-fluid"style="padding-left: 0px;margin-left: 159px;margin-top: 0px; margin-right:0px;" >
-        <div class="  mt-3 table-wrapper" style="height:100vh">
-            <div class="table-title">
-                <div class="">
-                    <div class="col">
-                        
-                    <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#ab64a26a; margin-left: 67px; margin-top: 75px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Designer Fashion<img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/undefined/external-fashion-lifestyles-flaticons-lineal-color-flat-icons-4.png"/> </button>
-                    </div>
-                   
-                </div>
+<div class="container-fluid mt-5">
+        <div class="d-flex justify-content-center row" style="margin-top: 82px;">
+        
+            <div class="row">
+                <div class="col-md-6 text-right mt-3">
+                <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#ab64a26a; " data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Designer Fashion<img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/undefined/external-fashion-lifestyles-flaticons-lineal-color-flat-icons-4.png"/> </button>
             </div>
-            <div class="table-responsive " style="margin-left: 94px;">
-                <table class="table table-striped table align-middle" id="myTable" style="width: 1580px;">
-                    <thead>
+           
+                    <div class="mt-3">
+                        <div class="table-responsive">
+                        <table class="table table-striped " id="myTable">
+                        <thead>
                         <tr style="  background-color:#410839c3; color:aliceblue">
                             <th >id</th>
                             <th>Nom </th>
@@ -104,12 +99,13 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+                        </div>
+                    </div>
         </div>
 
 </div>
 
-</div>
+</div
 <!-- model add Admin -->
    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

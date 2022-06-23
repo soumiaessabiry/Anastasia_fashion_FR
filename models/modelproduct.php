@@ -6,7 +6,9 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 		public function ajouterproduit($nom_product,$description_product,$Taille_produit,$prix_product,$img_product,$qutiter_product,$id_userpro){
 			$querinsertdproduct = $this->connect()->exec("INSERT INTO `produit`(`id_produit`, `nom_produit`, `image_produit`, `discription_produit`,`Taille`,`prix_produit`,`quantiter_produit`,`id_user_product`) VALUES(NULL,'$nom_product','$img_product','$description_product','$Taille_produit','$prix_product','$qutiter_product',$id_userpro)");
 			if ($querinsertdproduct) {
-				return true;
+			
+			  				return true;
+
 			}else{
 				return false;
 		    }
@@ -15,7 +17,8 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 
 		public function afficheProduct(){
 
-			$queraffichage="SELECT * FROM `produit`";
+			$queraffichage="SELECT * FROM `produit` ORDER BY `produit`.`id_produit` DESC";
+			
 			return $prepare=$this->connect()->query($queraffichage)->fetchALL();
 
 		}
@@ -40,6 +43,8 @@ require_once('../Anastasia_fashion_FR/database/connexiondb.php');
 		public function deletproduit($iddeletproduct){
 			$reqdeletproduct=$this->connect()->exec("DELETE FROM `produit` WHERE `id_produit`='$iddeletproduct' ");
 			return     $reqdeletproduct;
+			
+			
 		}
 	
 		

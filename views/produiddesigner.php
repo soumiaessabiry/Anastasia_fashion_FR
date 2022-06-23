@@ -48,6 +48,7 @@
 <div class="container-fluid mt-5">
         <div class="d-flex justify-content-center row" style="margin-top: 82px;">
             <div class="row">
+
                     <div class="col">
                     <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#b72da4a4;" data-bs-toggle="modal" data-bs-target="#exampleModal" > Ajouter un Produit <img src="https://img.icons8.com/doodle/34/undefined/used-product.png"/> </button>
                     </div>
@@ -56,6 +57,8 @@
                         <div class="table-responsive">
                     <table class="table table-striped table " id="myTable">
                         <thead>
+                        <div id="liveAlertPlaceholder"></div>
+
                             <tr style=" background-color: #b72da4a4;">
                                 <th>ID_produit</th>
                                 <th>produit</th>
@@ -146,8 +149,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Quantiter</label>
                             <input type="number" data-parsley-type="email" class="form-control" id="quantproduit" name="quantproduit" placeholder="Enter la quantiter"  min="1" max="30" required data-parsley-trigger="change">
                     </div>
-                    <input type="submit" name="addoroduct" class="btn btn-outline-warning btn-lg " style="background-color:#410839c3; color:aliceblue"   value="Ajouter product">
-                    <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" name="addoroduct" class="btn btn-outline-warning btn-lg " style="background-color:#410839c3; color:aliceblue"  id="liveAlertBtn" value="Ajouter product">
+                    <button type="button"  class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
 
                 </form>
                 </div>

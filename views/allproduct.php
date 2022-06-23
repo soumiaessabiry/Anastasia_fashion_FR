@@ -1,3 +1,8 @@
+<?php
+if(!isset($_SESSION['role'])){
+			header('location:login');}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

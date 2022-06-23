@@ -3,7 +3,7 @@
 
 $Controller = new AdministrateurController();
     // admin
-   $Controller->updateadmin();
+   $Controller->updateadmin() ;
 // designer
    $Controller->adddesigner();
    $Controller->updatedesigner();

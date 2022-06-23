@@ -9,21 +9,23 @@ class Command extends Connextiondb
 			
 		}
 		public function addcommand($id_produit,$nom_produit,$prix,$Taille_produit,$quatiter,$date,$gmail_client){
-			// $qnt=$this->connect()->query("SELECT quantiter_produit FROM produit where id_produit=$id_produit")->fetch();
-			// var_dump($qnt);
-
-			// if ($qnt> $quatiter) {
-			// 	echo " qutitier et insufisant";
-			// }else
-			$querinsertdproduct = $this->connect()->exec("INSERT INTO `command` (`id_command`,`id_produit`,`nom_prod_commder`,`prix_prod_commder`,`taille`,`quantiter`,`date_commande`,`gmail_client`) 
+			
+				$querinsertdproduct = $this->connect()->exec("INSERT INTO `command` (`id_command`,`id_produit`,`nom_prod_commder`,`prix_prod_commder`,`taille`,`quantiter`,`date_commande`,`gmail_client`)
 			VALUES (NULL,'$id_produit','$nom_produit','$prix','$Taille_produit','$quatiter','$date','$gmail_client')");
 			if ($querinsertdproduct) {
 				return true;
 			}else{
 				return false;
-		    }
+		    }	
+			
+		
+		
 
 		}
+		// public function selectCommand($id_produit,$quatiter){
+				
+        //     return true;			}
+		// } 
         public function affichecommand($gmail_client){
 
 			$queraffichcommand="SELECT * FROM `command` WHERE `gmail_client`='$gmail_client'";
@@ -38,7 +40,7 @@ class Command extends Connextiondb
 		// }
         public function afficheAllCommand(){
 
-			$queraffichcommand="SELECT * FROM `command` ";
+			$queraffichcommand="SELECT * FROM `command` ORDER BY `command`.`date_commande` DESC	";
 			return $prepare=$this->connect()->query($queraffichcommand)->fetchALL();
 
 		}

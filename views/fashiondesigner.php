@@ -48,6 +48,7 @@
         
             <div class="row">
                 <div class="col-md-6 text-right mt-3">
+                 <? $adddesigner ?>   
                 <button type="button" class="btn btn-outline btn-lg fw-bold mb-3 fd" style="background-color:#ab64a26a; " data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Designer Fashion<img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/undefined/external-fashion-lifestyles-flaticons-lineal-color-flat-icons-4.png"/> </button>
             </div>
            

@@ -1,6 +1,4 @@
 
-
-
 <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background:#ab64a2;">
             <div class="container px-lg-5">
                 <a class="navbar-brand" href="#!"><img src="././public/image/logo.jpg" style="width:70PX;border-radius: 20px;" alt="logo"></a>

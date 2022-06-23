@@ -16,8 +16,16 @@ class AdministrateurController  {
 			$updatAdmin=$_POST["idadmine"];
 			$emailAdmn=$_POST["updemailadme"];
 			$passwordadmn=$_POST["UpdpasswordAdmine"];
-			if($admine->updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn))header('location:Admin');
-			}
+			if($admine->updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn))
+			{
+				echo "<script type='text/javascript'>";
+				echo "alert(' Admin et  bien modifier');";
+				echo "window.location.href='Admin';";
+				echo "</script>";
+			}			
+		}
+			
+		
 	}
 
 // *******************************************************designer********************************/
@@ -30,8 +38,14 @@ class AdministrateurController  {
 						$Role=$_POST['role'];
 						$Email_Designer=$_POST['emaildesfas'];
 						$password_Designer=$_POST['passworddesfas'];
-						// $passworddesignerhach=password_hash($password_Designer,PASSWORD_DEFAULT);
-						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$password_Designer)) header('location:fashiondesigner');
+						$passworddesignerhach=password_hash($password_Designer,PASSWORD_DEFAULT);
+						if($designer->creatdesigner($Nom_Designer, $Prenom_Designer, $Role ,$Email_Designer,$passworddesignerhach)){
+							// header('location:fashiondesigner');
+							echo "<script type='text/javascript'>";
+							echo "alert(' Designer bien ajouter');";
+							echo "window.location.href='fashiondesigner';";
+							echo "</script>";
+						}
 					}
 				}
 				
@@ -52,8 +66,14 @@ class AdministrateurController  {
 						$Role_desig=$_POST['roleupd'];		
 						$Email_Designerupd=$_POST['emaildesfasupd'];
 						$password_Designerupd=$_POST['passworddesfasupd'];
-					    //  $passworddesignerhachupd=password_hash($password_Designerupd,PASSWORD_DEFAULT);
-						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$password_Designerupd,$id_designerupd)) header('location:fashiondesigner');
+					     $passworddesignerhachupd=password_hash($password_Designerupd,PASSWORD_DEFAULT);
+						if($designer->updatdesigner($Nom_Designerupd,$Prenom_Designerup,$Role_desig,$Email_Designerupd,$passworddesignerhachupd,$id_designerupd)) 
+						{
+							echo "<script type='text/javascript'>";
+							echo "alert('<div> Designer bien modifier');";
+							echo "window.location.href='fashiondesigner';";
+							echo "</script>";
+						}
 						}
 				}
 			
@@ -78,9 +98,22 @@ class AdministrateurController  {
 				$pwdclient=$_POST['passwordclient'];
 				$confpwdclient=$_POST['confpasswordclient'];
 				if ($pwdclient ===$confpwdclient) {
-					if($client->creatclinet($nomclient,$prenomclient,$Role_client,$emailclient,$pwdclient,$confpwdclient)) header('location:login');
-				}else echo 'eroooooor !!!!';
+					$passworddesignerhach=password_hash($pwdclient,PASSWORD_DEFAULT);
+					if($client->creatclinet($nomclient,$prenomclient,$Role_client,$emailclient,$passworddesignerhach,$passworddesignerhach)) {
+						echo "<script type='text/javascript'>";
+							echo "alert(' Client et  bien ajouter');";
+							echo "window.location.href='login';";
+							echo "</script>";
+						}
+					}else{
+				            echo "<script type='text/javascript'>";
+							echo "alert(' Probleme de inscription !!!');";
+							echo "window.location.href='signup';";
+							echo "</script>";
+							
+				}
 			}
+			
 		}
 
 		public function getAllClient(){
@@ -97,7 +130,8 @@ class AdministrateurController  {
 				$emaillogin = $_POST['emailuser'];
 				$passwordlogin = $_POST['passworduser'];
 
-				$res = $logine->login($emaillogin,$passwordlogin);
+				$res = $logine->login($emaillogin);
+				if(password_verify($_POST['passworduser'],$res['password_user'])){
 				$_SESSION['log']==true;
 				$_SESSION["id_users"] =$res['id_user'];
 				$_SESSION["prenom_user"] = $res['prenom_user'];
@@ -110,7 +144,10 @@ class AdministrateurController  {
 						header('location:dashborddesigner');
 				}else{
 					header('location:home');
+				}	
 				}
+
+			
 			}
 		}
 //*******************************************product***************************************************** */
@@ -126,7 +163,12 @@ class AdministrateurController  {
 				$qutiter_product = $_POST['quantproduit'];
 
 				if($products->ajouterproduit($nom_product,$description_product,$Taille_produit,$prix_product,$img_product,$qutiter_product,$_SESSION["id_users"]))
-				header('location:produiddesigner');
+				{
+				            echo "<script type='text/javascript'>";
+							echo "alert(' Produit  et  bien ajouter');";
+							echo "window.location.href='login';";
+							echo "</script>";
+				}
 
 			}
 		}
@@ -152,7 +194,14 @@ class AdministrateurController  {
 				$img_productupd = $_POST['imgprodupd'];
 				$prix_productupd = $_POST['prixprodupd'];
 				$qutiter_productupd = $_POST['quantprodupd'];
-				if($products->updateproduct($id_product,$nom_productupd,$img_productupd,$description_productupd ,$Taille_produitupd,$prix_productupd,$qutiter_productupd)) header('location:produiddesigner');
+				if($products->updateproduct($id_product,$nom_productupd,$img_productupd,$description_productupd ,$Taille_produitupd,$prix_productupd,$qutiter_productupd)) {
+					echo "<script type='text/javascript'>";
+							echo "alert(' Produit  et  bien Modifer');";
+							echo "window.location.href='produiddesigner';";
+							echo "</script>";
+							
+						
+				};
 				}
 		}
 
@@ -174,22 +223,39 @@ class AdministrateurController  {
 			}
 
 			public function addcommand(){
-				
+				$commands = new Command();
 				if (isset($_POST['Achter']) && !empty($_POST['Achter'])){ 
-					$commands = new Command();
-					$nom_produit=$_POST['nom_produit'];
+				if($_POST['qnt'] < $_POST['qutiterproduit']){
+					echo "<script type='text/javascript'>";
+					echo "alert('Votre commande a été annulée car vous commandez plus que la quantité disponible ');";
+					echo "window.location.href='home';";
+					echo "</script>";
+				
+
+				}else{
+				  $nom_produit=$_POST['nom_produit'];
 					$prix=$_POST['prix_produit'];
 					$quatiter=$_POST['qutiterproduit'];
 					$Taille_produit=$_POST['taille'];
 					$date=date("Y-m-d H:i:s", strtotime('-2 hours'));
-						// var_dump($_POST['qutiterproduit']);
-						// 	// var_dump($_POST);
-						// 	// echo $_SESSION['id_produit'];
 					if($commands->addcommand($_SESSION['id_produit'],$nom_produit,$prix,$Taille_produit,$quatiter,$date,$_SESSION["email_user"]))
-					header('location:moncommand');
+					{
+						echo "<script type='text/javascript'>";
+						echo "alert(' Votre commande et  bien ajouter');";
+						echo "window.location.href='moncommand';";
+						echo "</script>";
+						
+					}
+					}
+								
+				}
+				
+				
+				
+				
 
 			
-				}
+				
 			}
 			public function getCommandbyclient(){
 

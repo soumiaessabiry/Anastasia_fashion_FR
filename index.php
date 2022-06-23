@@ -91,6 +91,7 @@ if (basename($_SERVER['REQUEST_URI'])==="home") {
 
 }
 
+require_once('views/includes/scriptfooter.php') ;
 
 
 

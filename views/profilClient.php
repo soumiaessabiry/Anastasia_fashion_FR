@@ -43,7 +43,7 @@
                 <?php } ?> 
                     <div class="d-flex flex-column align-items-left text-lrft p-3 " style="margin-top: 100px;">
                     <img class="rounded-circle mt-5" src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/undefined/external-profile-web-smashingstocks-glyph-smashing-stocks.png" width="90">
-                    <span class="fw-bold fs-4"><?= $client['nom_user'] ?></span>
+                    <span class="fw-bold fs-4"><?= $client['role_user'] ?></span>
                     <span class="text-black-50 fw-bold fs-4"><?= $client['email_user'] ?></span>
                 </div>
                 </div>

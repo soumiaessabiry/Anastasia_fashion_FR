@@ -159,14 +159,16 @@ class AdministrateurController  {
 				$description_product = $_POST['discrip'];
 				$Taille_produit= $_POST['taille_produ'];
 				$prix_product = $_POST['prixproduit'];
-				$img_product = $_POST['imgproduit'];
+				$img_product = $_FILES['imgproduit']['name'];
+				$fille_tmp=$_FILES['imgproduit']['tmp_name'];
+				move_uploaded_file($fille_tmp,"../Anastasia_fashion_FR/public/image/".$img_product);
 				$qutiter_product = $_POST['quantproduit'];
 
 				if($products->ajouterproduit($nom_product,$description_product,$Taille_produit,$prix_product,$img_product,$qutiter_product,$_SESSION["id_users"]))
 				{
 				            echo "<script type='text/javascript'>";
 							echo "alert(' Produit  et  bien ajouter');";
-							echo "window.location.href='login';";
+							echo "window.location.href='produiddesigner';";
 							echo "</script>";
 				}
 

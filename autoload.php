@@ -1,6 +1,5 @@
 <?php
-// session_start();
-require_once("./bootsrap.php");
+require_once('./app/require.php');
 spl_autoload_register('autoload');
 
 function autoload($class){

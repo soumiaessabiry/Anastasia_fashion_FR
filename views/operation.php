@@ -1,5 +1,4 @@
-<?php
-
+ <?php
 
 $Controller = new AdministrateurController();
     // admin
@@ -24,4 +23,4 @@ $Controller = new AdministrateurController();
    $Controller->getAllUser();
    
 
- ?>
+ ?> 

@@ -116,7 +116,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form class="form-container" action="operation" id="form1" method="POST"data-parsley-validate="">
+                <form class="form-container" action="operation" id="form1" method="POST"data-parsley-validate="" enctype="multipart/form-data">
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">produit </label>
                         <input type="text" class="form-control" id="prodajouterr" name="prodajouter" placeholder="Enter nom" style="margin-bottom: 32px;" minlength="4"  maxlength="30" data-parsley-trigger="change" required>
@@ -170,12 +170,12 @@
                 <div class="modal-body">
                 <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate="">
                 <div class="mb-3 fw-bold">
-                        <label for="exampleFormControlInput1" class="form-label">id </label>
-                        <input type="text" class="form-control" id="id_produit" name="updproduite" placeholder="Enter nom"  min="3"	 max="20" style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <!-- <label for="exampleFormControlInput1" class="form-label">id </label> -->
+                        <input type="text"  hidden class="form-control" id="id_produit" name="updproduite" placeholder="Enter nom"   style="margin-bottom: 32px;" >
                  </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">produit </label>
-                        <input type="text" class="form-control" id="nomproduitupd" name="nomproduitupde" placeholder="Enter nom"  min="3" max="20"  style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <input type="text" class="form-control" id="nomproduitupd" name="nomproduitupde" placeholder="Enter nom"  minlength="4" maxlength="15"  style="margin-bottom: 32px;" data-parsley-trigger="change" required>
                  </div>
                  <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label"></label>
@@ -183,7 +183,7 @@
                     </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">discription</label>
-                        <textarea   rows="10" type="text" class="form-control" id="discrupdprode" name="discrupdprod" placeholder="Enter dicription" style="margin-bottom: 32px;"  data-parsley-trigger="change" required ></textarea>
+                        <textarea   rows="10" type="text" class="form-control" id="discrupdprode" name="discrupdprod" placeholder="Enter dicription"  minlength="10" maxlength="100"  style="margin-bottom: 32px;"  data-parsley-trigger="change" required ></textarea>
                     </div>
                     <div class="mb-3 fw-bold">
                 <label for="cars">Ajouter la taille:</label>
@@ -206,7 +206,7 @@
                             <input type="number" data-parsley-type="email" class="form-control" id="quantprodupde" name="quantprodupd" placeholder="Enter la quantiter" required data-parsley-trigger="change">
                     </div>
                     <button type="submit" name="updateproduct" class="btn btn-primary ">update designer</button>
-                    <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn  btn-lg" data-bs-dismiss="modal">Close</button>
 
                 </form>     
                 </div>

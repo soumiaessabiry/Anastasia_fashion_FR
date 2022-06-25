@@ -21,7 +21,7 @@
     <div class="wrapper ">
 		
 	<p class="text-center fw-bold fs-3 pt-2" style="color:#ab64a2 ;">Inscription<img src="https://img.icons8.com/color/48/undefined/join-skin-type-7.png"/></p>
-		<form class="p-3 mt-3" method="post" action="operation">
+		<form class="p-3 mt-3" method="post" action="operation"  data-parsley-validate="">
 
 			<div class="form-field d-flex align-items-center">
 				

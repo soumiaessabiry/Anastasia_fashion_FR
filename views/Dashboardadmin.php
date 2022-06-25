@@ -114,7 +114,10 @@
                <span class="icon"><img src="https://img.icons8.com/doodle/64/undefined/used-product.png"/></span>
                 <div class="card-body">
                     <h5 class="card-title fw-bold ">Product Anastasia</h5>
-                    <p class="card-text fw-bold fs-3">Totale Product Anastasia</p>
+                    <p class="card-text fw-bold fs-3"><?php 
+                   $admine = new AdministrateurController();
+                  echo count($admine->getAllproduit());            
+                  ?></p>
                 </div>
             </div>
         </div>

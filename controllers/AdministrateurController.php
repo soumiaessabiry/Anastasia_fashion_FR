@@ -155,11 +155,13 @@ class AdministrateurController  {
 			if (isset($_POST['addoroduct'])){ 
 				$products = new Product();
 				// $id_designer=$_SESSION["nom_user"];
+								
 				$nom_product = $_POST['prodajouter'];
 				$description_product = $_POST['discrip'];
 				$Taille_produit= $_POST['taille_produ'];
 				$prix_product = $_POST['prixproduit'];
 				$img_product = $_FILES['imgproduit']['name'];
+				
 				$fille_tmp=$_FILES['imgproduit']['tmp_name'];
 				move_uploaded_file($fille_tmp,"../Anastasia_fashion_FR/public/image/".$img_product);
 				$qutiter_product = $_POST['quantproduit'];
@@ -275,6 +277,12 @@ class AdministrateurController  {
 
 				$commandclient=new Command();
 				return $commandclient->affichecommand($_SESSION["id_users"],$_SESSION['']);  
+			
+			}
+			public function getCommandfordesigner(){
+
+				$commandclient=new Command();
+				return $commandclient->affichecommandfordesigner($_SESSION["id_users"]);  
 			
 			}
 			public function delecommand(){

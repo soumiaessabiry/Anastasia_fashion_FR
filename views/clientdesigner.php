@@ -49,32 +49,34 @@
                         </div>
                         <div class="mt-3">
                             <div class="table-responsive">
-                                <table class="table table-striped ">
-                                    <thead>
-                                        <tr style=" background:#8b106273;">
-                                            <th ></th>
-                                            <th hidden>non</th>
-                                            <th>Prenon</th>
-                                            <th>Nom</th>
-                                            <th>Email</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="fw-bold">
-                                        <tr class="bg-client">
-                                            <td ><img src="https://img.icons8.com/ios-filled/40/undefined/user-female-circle.png"/></td>
-                                            <td hidden >1</td>
-                                            <td class="text-nowrap">prenon client</td>
-                                            <td class="text-nowrap">Nomclient </td>
-                                            <td class="text-nowrap">client@gmail.com</td>
-                                            
-                                        </tr>
-                                        <tr id="spacing-row">
-                                        <td></td>
-                                        </tr>
-                                                
-                                    </tbody>
-                               
-                                </table>
+                            <table class="table">
+                                <thead class="fw-bolder" style="color:#410839; background: #b72da4a4">
+                                      
+                                        <th>Nom produit</th>
+                                        <th>prix produit</th>
+                                        <th> Quantiter </th>
+                                        <th> gmail client commander  </th>
+                                       
+                                        <tbody class="fw-bold">
+
+                                            <tr class="bg-client">
+                                            <?php 
+                                                    $commandforprdres = new AdministrateurController();
+                                                    $commanddesiner=$commandforprdres->getCommandfordesigner();
+                                                    foreach($commanddesiner as $commandforprdres){
+                                                ?>
+                                                <tr>
+                                                    <td ><?= $commandforprdres['nom_prod_commder'] ?></td>
+                                                    <td><?= $commandforprdres['prix_prod_commder'] ?></td>
+                                                    <td><?= $commandforprdres['quantiter'] ?></td>
+                                                    <td><?= $commandforprdres['gmail_client'] ?></td>
+                                                </tr>
+                                            </tr>
+                                            <?php } ?>  
+                                                    
+                                                    
+                                        </tbody>
+                                    </table>
                             </div>  
                         </div>  
                     </div>  

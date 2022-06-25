@@ -116,14 +116,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form class="form-container" action="operation" id="form1" method="POST"data-parsley-validate="" enctype="multipart/form-data">
+                <form class="form-container" action="operation" id="form1" method="POST" data-parsley-validate="" enctype="multipart/form-data">
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">produit </label>
                         <input type="text" class="form-control" id="prodajouterr" name="prodajouter" placeholder="Enter nom" style="margin-bottom: 32px;" minlength="4"  maxlength="30" data-parsley-trigger="change" required>
                 </div>
                 <div class="mb-3 fw-bold">
-                        <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="file" class="form-control" id="imgproduit" name="imgproduit" placeholder="Enter image de produit " style="margin-bottom: 32px;" data-parsley-trigger="change" required>
+                        <label for="exampleFormControlInput1" class="form-label" ></label>
+                        <input type="file" class="form-control" id="imgproduit" name="imgproduit" placeholder="Enter image de produit " style="margin-bottom: 32px;" data-parsley-trigger="change" required accept=".jpg,.jpeg,.png">
                     </div>
                 <div class="mb-3 fw-bold">
                         <label for="exampleFormControlInput1" class="form-label">discription</label>

@@ -44,6 +44,12 @@ class Command extends Connextiondb
 			return $prepare=$this->connect()->query($queraffichcommand)->fetchALL();
 
 		}
+        public function affichecommandfordesigner($id_designer){
+
+			$queraffichcommand="SELECT command.id_produit ,command.nom_prod_commder,command.prix_prod_commder,command.quantiter,command.gmail_client ,produit.id_produit ,produit.id_user_product FROM command INNER JOIN produit ON produit.id_produit=command.id_produit WHERE produit.id_user_product=$id_designer";
+			return $prepare=$this->connect()->query($queraffichcommand)->fetchALL();
+
+		}
 		public function delecommande($iddeletcommand){
 			$reqdeletproduct=$this->connect()->exec("DELETE FROM `command` WHERE `id_command`='$iddeletcommand' ");
 			return     $reqdeletproduct;

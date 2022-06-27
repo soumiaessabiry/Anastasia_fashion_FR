@@ -24,6 +24,13 @@
                           </div>
                           <div class="d-grid col-12 mt-3">
                               <button class="btn btnsidbar py-4 fs-4" type="button">
+                                  <a href="Dashboardadmin" >
+                                      <span class="title">Mon Dashboard</span>
+                                  </a>
+                              </button>
+                          </div>
+                          <div class="d-grid col-12 mt-3">
+                              <button class="btn btnsidbar py-4 fs-4" type="button">
                                   <a href="home" >
                                       <span class="icon"><img src="https://img.icons8.com/color/40/undefined/administrator-male-skin-type-7.png"/></span>
                                       <span class="title">Home</span>

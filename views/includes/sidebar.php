@@ -5,7 +5,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-top: 19px;">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../views/home.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -13,7 +13,6 @@
                   
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#!" style="padding-top: 0px;">Panier <img src="https://img.icons8.com/ios-filled/50/undefined/shopping-cart-promotion.png"/> </a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">compte</a>
@@ -24,7 +23,14 @@
                   
                             </ul>
                         </li>
+                       
                     </ul>
+                    <div  >
+                          <button class="btn btn-lg fw-bold" style="background: linear-gradient(45deg, #212529, #9f1a8ad6);color: white;border: none;" ><?=$_SESSION["prenom_user"]  ?? ''?></button>
+                          
+                           <button class="btn btn-lg" style="background: linear-gradient(45deg, #212529, #9f1a8ad6);color: white;border: none;"><?=$_SESSION["role"]  ?? ''?></button>
+                    
+                          </div>
                     
                 </div>
             </div>

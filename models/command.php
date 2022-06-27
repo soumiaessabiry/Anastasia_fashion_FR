@@ -10,7 +10,7 @@ class Command extends Connextiondb
 		}
 		public function addcommand($id_produit,$nom_produit,$prix,$Taille_produit,$quatiter,$date,$gmail_client){
 			
-				$querinsertdproduct = $this->connect()->exec("INSERT INTO `command` (`id_command`,`id_produit`,`nom_prod_commder`,`prix_prod_commder`,`taille`,`quantiter`,`date_commande`,`gmail_client`)
+			$querinsertdproduct = $this->connect()->exec("INSERT INTO `command` (`id_command`,`id_produit`,`nom_prod_commder`,`prix_prod_commder`,`taille`,`quantiter`,`date_commande`,`gmail_client`)
 			VALUES (NULL,'$id_produit','$nom_produit','$prix','$Taille_produit','$quatiter','$date','$gmail_client')");
 			if ($querinsertdproduct) {
 				return true;
@@ -22,22 +22,14 @@ class Command extends Connextiondb
 		
 
 		}
-		// public function selectCommand($id_produit,$quatiter){
-				
-        //     return true;			}
-		// } 
+	 
         public function affichecommand($gmail_client){
 
 			$queraffichcommand="SELECT * FROM `command` WHERE `gmail_client`='$gmail_client'";
 			return $prepare=$this->connect()->query($queraffichcommand)->fetchALL();
 
 		}
-        // public function affichecommandbydesigner($id_designer){
-
-		// 	$queraffichcommand="SELECT * FROM `command` WHERE `id_produit`='$id_designer'";
-		// 	return $prepare=$this->connect()->query($queraffichcommand)->fetchALL();
-
-		// }
+   
         public function afficheAllCommand(){
 
 			$queraffichcommand="SELECT * FROM `command` ORDER BY `command`.`date_commande` DESC	";

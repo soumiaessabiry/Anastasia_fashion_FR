@@ -45,7 +45,8 @@ if(isset($_GET['page'])){
     include('views/includes/404.php');
    
 }else{
-      $home->index('home');}
+      $home->index('home');
+    }
 
 
   

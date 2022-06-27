@@ -80,14 +80,14 @@
                              ?>
                                 <td><?= $products['id_produit'] ?></td>
                                 <td><?= $products['nom_produit'] ?></td>
-                                <td><?= $products['image_produit'] ?></td>
+                                <td class="image"><img src="./public/image/<?= $products['image_produit'] ?>" alt="pr-sample23" style="WIDTH: 100px;HEIGHT: 90px;"/></td>
                                 <td><?= $products['discription_produit'] ?></td>
                                 <td><?= $products['Taille'] ?></td>
                                 <td><?= $products['prix_produit'] ?></td>
                                 <td><?= $products['quantiter_produit'] ?></td>
                                 <td><?= $products['id_user_product'] ?></td>
-                                <td class="d-flex  align-items-start">
-                                    <button name="updproduite" class="btn btn-outline-primary  fw-bold updateproduc" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/></a></button>
+                                <td class="d-flex  align-items-start " style="height: 130px">
+                                    <button name="updproduite" class="btn btn-outline-primary  fw-bold updateproduc" ><a href="" style="  color:primary"  data-bs-toggle="modal" data-bs-target="#myModel"><img src="https://img.icons8.com/fluency/30/undefined/edit-user-female.png"/ ></a></button>
                                     <form  action="operation"   onclick="return confirm('Êtes vous sur de vouloir supprimer ??!!');" method="POST" ><button type="submit" name ="deletProduit" class="btn btn-outline-danger " style=" margin-left: 10PX;" data-toggle="modal">
                                         <input type="text" hidden name="updproduite" value="<?= $products['id_produit']  ?> "><img src="https://img.icons8.com/color/30/undefined/delete-forever.png"/></button>
                                     </form> 

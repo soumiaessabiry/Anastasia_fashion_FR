@@ -1,34 +1,33 @@
 
 <?php
 class AdministrateurController  {
-
-	public function getAlladmin(){
-		$admines=new Administrateur();
-		return $admines->afficheAdmin();  
-	}
-	
-	public function updateadmin(){
-		if(isset($_POST['updateAdmin'])){
-			$admine = new Administrateur();
-			$nom_admin=$_POST['updnamAdmie'];
-			$prenom_admin=$_POST['updprenAdmin']; 
-			$role_admin=$_POST['roleupd']; 
-			$updatAdmin=$_POST["idadmine"];
-			$emailAdmn=$_POST["updemailadme"];
-			$passwordadmn=$_POST["UpdpasswordAdmine"];
-			if($admine->updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn))
-			{
-				echo "<script type='text/javascript'>";
-				echo "alert(' Admin et  bien modifier');";
-				echo "window.location.href='Admin';";
-				echo "</script>";
-			}			
+// **************************************Admin*******************************/
+		public function getAlladmin(){
+			$admines=new Administrateur();
+			return $admines->afficheAdmin();  
 		}
-			
 		
-	}
-
-// *******************************************************designer********************************/
+		public function updateadmin(){
+			if(isset($_POST['updateAdmin'])){
+				$admine = new Administrateur();
+				$nom_admin=$_POST['updnamAdmie'];
+				$prenom_admin=$_POST['updprenAdmin']; 
+				$role_admin=$_POST['roleupd']; 
+				$updatAdmin=$_POST["idadmine"];
+				$emailAdmn=$_POST["updemailadme"];
+				$passwordadmn=$_POST["UpdpasswordAdmine"];
+				if($admine->updatAdmin($nom_admin,$prenom_admin,$role_admin,$updatAdmin,$emailAdmn,$passwordadmn))
+				{
+					echo "<script type='text/javascript'>";
+					echo "alert(' Admin et  bien modifier');";
+					echo "window.location.href='Admin';";
+					echo "</script>";
+				}			
+			}
+				
+			
+		}
+// ************************************designer********************************/
 				public function adddesigner(){
 
 					if (isset($_POST['Adddesigner'])){ 
@@ -50,7 +49,6 @@ class AdministrateurController  {
 				}
 				
 				public function getAlldesigner(){
-			
 					$designer=new Designer();
 					return $designer->affichedesigner();  
 			
@@ -85,8 +83,7 @@ class AdministrateurController  {
 						} 
 					}
 
-
-      // ********************************Client*************************************************** 	
+// ********************************Client*************************************************** 	
 		public function addClient(){
 
 			if (isset($_POST['signupclient'])){ 
@@ -121,15 +118,12 @@ class AdministrateurController  {
 			return $client->afficheclient();  
 
         }
-//********************************************login****************************************** */
+//***********************************login****************************************** */
 		public function loginUsers(){
-
 			if (isset($_POST['loginuser'])){ 
-
 				$logine = new login();
 				$emaillogin = $_POST['emailuser'];
 				$passwordlogin = $_POST['passworduser'];
-
 				$res = $logine->login($emaillogin);
 				if(password_verify($_POST['passworduser'],$res['password_user'])){
 				$_SESSION['log']==true;

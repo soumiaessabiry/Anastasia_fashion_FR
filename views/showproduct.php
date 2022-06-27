@@ -1,8 +1,8 @@
 <?php
-if(empty($_SESSION['role']) ||$_SESSION['role']!='Client'){
-
-    header('location:login');}
-
+   if(empty($_SESSION['role']) || $_SESSION['role']!='Client')
+{
+   header('location:login');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@ if(empty($_SESSION['role']) ||$_SESSION['role']!='Client'){
             <div class="container bg-white ">
             <?php 
                     $products=new AdministrateurController();
-                    $product=$products->creatpanier($_SESSION['id_produit']);
+                    $product=$products->creatpanier($_SESSION['id_produit' ]?? '');
 
                     foreach($product  as $products){
                

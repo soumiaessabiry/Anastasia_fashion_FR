@@ -68,7 +68,7 @@
                                         <tr class="bg-product">
                                         <td><?= $products['id_produit'] ?></td>
                                         <td><?= $products['nom_produit'] ?></td>
-                                        <td><?= $products['image_produit'] ?></td>
+                                        <td class="image"><img src="./public/image/<?= $products['image_produit'] ?>" alt="pr-sample23" style="WIDTH: 100px;HEIGHT: 90px;"/></td>
                                         <td><?= $products['discription_produit'] ?></td>
                                         <td><?= $products['Taille'] ?></td>
                                         <td><?= $products['prix_produit'] ?></td>
